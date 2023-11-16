@@ -14,7 +14,24 @@
 		0EAAE1A12B04D01F004EB10F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1A02B04D01F004EB10F /* Persistence.swift */; };
 		0EAAE1A42B04D01F004EB10F /* Wetter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1A22B04D01F004EB10F /* Wetter.xcdatamodeld */; };
 		0EAAE1AB2B04D3E9004EB10F /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0EAAE1AA2B04D3E8004EB10F /* File */; };
+		0EAAE1AD2B050739004EB10F /* appleMapsPracitce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1AC2B050739004EB10F /* appleMapsPracitce.swift */; };
+		0EAAE1B12B050775004EB10F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAAE1AF2B050770004EB10F /* MapKit.framework */; };
+		0EAAE1B22B050775004EB10F /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAAE1AF2B050770004EB10F /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0EAAE1B32B050775004EB10F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0EAAE1B22B050775004EB10F /* MapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0EAAE1942B04D01D004EB10F /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +42,8 @@
 		0EAAE1A02B04D01F004EB10F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0EAAE1A32B04D01F004EB10F /* Wetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wetter.xcdatamodel; sourceTree = "<group>"; };
 		0EAAE1AA2B04D3E8004EB10F /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		0EAAE1AC2B050739004EB10F /* appleMapsPracitce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleMapsPracitce.swift; sourceTree = "<group>"; };
+		0EAAE1AF2B050770004EB10F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAAE1B12B050775004EB10F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +64,7 @@
 				0EAAE1AA2B04D3E8004EB10F /* File */,
 				0EAAE1962B04D01D004EB10F /* Wetter */,
 				0EAAE1952B04D01D004EB10F /* Products */,
+				0EAAE1AE2B050770004EB10F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0EAAE1972B04D01D004EB10F /* WetterApp.swift */,
+				0EAAE1AC2B050739004EB10F /* appleMapsPracitce.swift */,
 				0EAAE1992B04D01D004EB10F /* ContentView.swift */,
 				0EAAE19B2B04D01F004EB10F /* Assets.xcassets */,
 				0EAAE1A02B04D01F004EB10F /* Persistence.swift */,
@@ -76,6 +98,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0EAAE1AE2B050770004EB10F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EAAE1AF2B050770004EB10F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +116,7 @@
 				0EAAE1902B04D01D004EB10F /* Sources */,
 				0EAAE1912B04D01D004EB10F /* Frameworks */,
 				0EAAE1922B04D01D004EB10F /* Resources */,
+				0EAAE1B32B050775004EB10F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +181,7 @@
 				0EAAE1A12B04D01F004EB10F /* Persistence.swift in Sources */,
 				0EAAE19A2B04D01D004EB10F /* ContentView.swift in Sources */,
 				0EAAE1A42B04D01F004EB10F /* Wetter.xcdatamodeld in Sources */,
+				0EAAE1AD2B050739004EB10F /* appleMapsPracitce.swift in Sources */,
 				0EAAE1982B04D01D004EB10F /* WetterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

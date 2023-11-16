@@ -1,10 +1,20 @@
 TO-DO:
 
 Die API prüfen, ob die auch wirklich die Daten referenziert, die gebraucht werden.
-Prüfen, ob alle UI Elemente klar sind, beziehungsweise Projekte referenzieren, die UI Elemente darstellen
+Prüfen, ob alle UI Elemente klar sind, beziehungsweise Projekte referenzieren, die die UI Elemente darstellen
 
 
 
 Projekt Referenzen: Navigation (komplexe Elemente II)
 Liste Referenzen: SwiftUI-Listen (w4t1)
 Tab Referenzen: Tabview
+
+
+API Referenz:
+
+
+https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
+
+
+mapKit
+https://developer.apple.com/documentation/corelocation/converting_between_coordinates_and_user-friendly_place_names
