@@ -5,7 +5,7 @@ Prüfen, ob alle UI Elemente klar sind, beziehungsweise Projekte referenzieren, 
 
 
 
-Projekt Referenzen: Navigation (komplexe Elemente II)
+Projekt Referenzen: Navigation (komplexe Elemente I/II)
 Liste Referenzen: SwiftUI-Listen (w4t1)
 Tab Referenzen: Tabview
 Navigations und Entitäten Referenz(Core Data): Traveler
@@ -17,10 +17,10 @@ Städtenamen in Breiten und Längengrad auflösen:
 http://api.openweathermap.org/geo/1.0/direct?q=Berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190
 
 5 Für die nächsten fünf Tage stündlich Wetter:
-https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
+api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
 
 
-
+https://api.openweathermap.org/data/3.0/forecast/daily?lat=52,44&lon=13,40&cnt=5&appid=29ab9d965c5e4da691c9d5979ff10190
 
 mapKit
 https://developer.apple.com/documentation/corelocation/converting_between_coordinates_and_user-friendly_place_names
