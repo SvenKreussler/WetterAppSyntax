@@ -16,6 +16,8 @@
 		0EAAE1AB2B04D3E9004EB10F /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0EAAE1AA2B04D3E8004EB10F /* File */; };
 		0EAAE1B12B050775004EB10F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAAE1AF2B050770004EB10F /* MapKit.framework */; };
 		0EAAE1B22B050775004EB10F /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAAE1AF2B050770004EB10F /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EF184FE2B0B626600B1A1D6 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF184FD2B0B626600B1A1D6 /* TabItem.swift */; };
+		0EF185012B0B666B00B1A1D6 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF185002B0B666B00B1A1D6 /* TabsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +44,8 @@
 		0EAAE1A32B04D01F004EB10F /* Wetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wetter.xcdatamodel; sourceTree = "<group>"; };
 		0EAAE1AA2B04D3E8004EB10F /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		0EAAE1AF2B050770004EB10F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0EF184FD2B0B626600B1A1D6 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		0EF185002B0B666B00B1A1D6 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		0EAAE1962B04D01D004EB10F /* Wetter */ = {
 			isa = PBXGroup;
 			children = (
+				0EF184FC2B0B623D00B1A1D6 /* Enums */,
+				0EF184FB2B0B610E00B1A1D6 /* UI */,
 				0EAAE1972B04D01D004EB10F /* WetterApp.swift */,
 				0EAAE1992B04D01D004EB10F /* ContentView.swift */,
 				0EAAE19B2B04D01F004EB10F /* Assets.xcassets */,
@@ -101,6 +107,55 @@
 				0EAAE1AF2B050770004EB10F /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EF184FB2B0B610E00B1A1D6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0EF185042B0B6A5300B1A1D6 /* Search */,
+				0EF185032B0B6A3E00B1A1D6 /* Home */,
+				0EF185022B0B6A2000B1A1D6 /* Map */,
+				0EF184FF2B0B665700B1A1D6 /* Tab */,
+			);
+			name = UI;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0EF184FC2B0B623D00B1A1D6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0EF184FD2B0B626600B1A1D6 /* TabItem.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		0EF184FF2B0B665700B1A1D6 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				0EF185002B0B666B00B1A1D6 /* TabsView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		0EF185022B0B6A2000B1A1D6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		0EF185032B0B6A3E00B1A1D6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0EF185042B0B6A5300B1A1D6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF185012B0B666B00B1A1D6 /* TabsView.swift in Sources */,
 				0EAAE1A12B04D01F004EB10F /* Persistence.swift in Sources */,
 				0EAAE19A2B04D01D004EB10F /* ContentView.swift in Sources */,
 				0EAAE1A42B04D01F004EB10F /* Wetter.xcdatamodeld in Sources */,
+				0EF184FE2B0B626600B1A1D6 /* TabItem.swift in Sources */,
 				0EAAE1982B04D01D004EB10F /* WetterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
