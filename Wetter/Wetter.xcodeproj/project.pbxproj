@@ -7,168 +7,112 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EAAE1982B04D01D004EB10F /* WetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1972B04D01D004EB10F /* WetterApp.swift */; };
-		0EAAE19A2B04D01D004EB10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1992B04D01D004EB10F /* ContentView.swift */; };
-		0EAAE19C2B04D01F004EB10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAAE19B2B04D01F004EB10F /* Assets.xcassets */; };
-		0EAAE19F2B04D01F004EB10F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAAE19E2B04D01F004EB10F /* Preview Assets.xcassets */; };
-		0EAAE1A12B04D01F004EB10F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1A02B04D01F004EB10F /* Persistence.swift */; };
-		0EAAE1A42B04D01F004EB10F /* Wetter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAE1A22B04D01F004EB10F /* Wetter.xcdatamodeld */; };
-		0EAAE1AB2B04D3E9004EB10F /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0EAAE1AA2B04D3E8004EB10F /* File */; };
-		0EAAE1B12B050775004EB10F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAAE1AF2B050770004EB10F /* MapKit.framework */; };
-		0EAAE1B22B050775004EB10F /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAAE1AF2B050770004EB10F /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0EF184FE2B0B626600B1A1D6 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF184FD2B0B626600B1A1D6 /* TabItem.swift */; };
-		0EF185012B0B666B00B1A1D6 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF185002B0B666B00B1A1D6 /* TabsView.swift */; };
+		0E7758D62B0B90220069AF61 /* Components in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758CE2B0B90220069AF61 /* Components */; };
+		0E7758D72B0B90220069AF61 /* Home in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758CF2B0B90220069AF61 /* Home */; };
+		0E7758D82B0B90220069AF61 /* Search in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758D02B0B90220069AF61 /* Search */; };
+		0E7758DB2B0B90220069AF61 /* Map in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758D32B0B90220069AF61 /* Map */; };
+		0E7758E12B0B91610069AF61 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758DF2B0B91610069AF61 /* File */; };
+		0E7758E22B0B91610069AF61 /* Navigation in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758E02B0B91610069AF61 /* Navigation */; };
+		0ED21BEE2B0B878F002EC3B0 /* WetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED21BED2B0B878F002EC3B0 /* WetterApp.swift */; };
+		0ED21BF02B0B878F002EC3B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED21BEF2B0B878F002EC3B0 /* ContentView.swift */; };
+		0ED21BF22B0B8791002EC3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED21BF12B0B8791002EC3B0 /* Assets.xcassets */; };
+		0ED21BF52B0B8791002EC3B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED21BF42B0B8791002EC3B0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		0EAAE1B32B050775004EB10F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0EAAE1B22B050775004EB10F /* MapKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		0EAAE1942B04D01D004EB10F /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EAAE1972B04D01D004EB10F /* WetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetterApp.swift; sourceTree = "<group>"; };
-		0EAAE1992B04D01D004EB10F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0EAAE19B2B04D01F004EB10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0EAAE19E2B04D01F004EB10F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0EAAE1A02B04D01F004EB10F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		0EAAE1A32B04D01F004EB10F /* Wetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wetter.xcdatamodel; sourceTree = "<group>"; };
-		0EAAE1AA2B04D3E8004EB10F /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		0EAAE1AF2B050770004EB10F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		0EF184FD2B0B626600B1A1D6 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		0EF185002B0B666B00B1A1D6 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		0E7758CA2B0B89EE0069AF61 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0E7758CE2B0B90220069AF61 /* Components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Components; sourceTree = "<group>"; };
+		0E7758CF2B0B90220069AF61 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Home; sourceTree = "<group>"; };
+		0E7758D02B0B90220069AF61 /* Search */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Search; sourceTree = "<group>"; };
+		0E7758D32B0B90220069AF61 /* Map */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Map; sourceTree = "<group>"; };
+		0E7758DF2B0B91610069AF61 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		0E7758E02B0B91610069AF61 /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Navigation; sourceTree = "<group>"; };
+		0ED21BEA2B0B878F002EC3B0 /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ED21BED2B0B878F002EC3B0 /* WetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetterApp.swift; sourceTree = "<group>"; };
+		0ED21BEF2B0B878F002EC3B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0ED21BF12B0B8791002EC3B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ED21BF42B0B8791002EC3B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0EAAE1912B04D01D004EB10F /* Frameworks */ = {
+		0ED21BE72B0B878F002EC3B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAAE1B12B050775004EB10F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0EAAE18B2B04D01D004EB10F = {
+		0E7758C92B0B89EE0069AF61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0EAAE1AA2B04D3E8004EB10F /* File */,
-				0EAAE1962B04D01D004EB10F /* Wetter */,
-				0EAAE1952B04D01D004EB10F /* Products */,
-				0EAAE1AE2B050770004EB10F /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		0EAAE1952B04D01D004EB10F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0EAAE1942B04D01D004EB10F /* Wetter.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0EAAE1962B04D01D004EB10F /* Wetter */ = {
-			isa = PBXGroup;
-			children = (
-				0EF184FC2B0B623D00B1A1D6 /* Enums */,
-				0EF184FB2B0B610E00B1A1D6 /* UI */,
-				0EAAE1972B04D01D004EB10F /* WetterApp.swift */,
-				0EAAE1992B04D01D004EB10F /* ContentView.swift */,
-				0EAAE19B2B04D01F004EB10F /* Assets.xcassets */,
-				0EAAE1A02B04D01F004EB10F /* Persistence.swift */,
-				0EAAE1A22B04D01F004EB10F /* Wetter.xcdatamodeld */,
-				0EAAE19D2B04D01F004EB10F /* Preview Content */,
-			);
-			path = Wetter;
-			sourceTree = "<group>";
-		};
-		0EAAE19D2B04D01F004EB10F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0EAAE19E2B04D01F004EB10F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0EAAE1AE2B050770004EB10F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0EAAE1AF2B050770004EB10F /* MapKit.framework */,
+				0E7758CA2B0B89EE0069AF61 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0EF184FB2B0B610E00B1A1D6 /* UI */ = {
+		0E7758DE2B0B904F0069AF61 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0EF185042B0B6A5300B1A1D6 /* Search */,
-				0EF185032B0B6A3E00B1A1D6 /* Home */,
-				0EF185022B0B6A2000B1A1D6 /* Map */,
-				0EF184FF2B0B665700B1A1D6 /* Tab */,
+				0E7758CE2B0B90220069AF61 /* Components */,
+				0E7758CF2B0B90220069AF61 /* Home */,
+				0E7758D32B0B90220069AF61 /* Map */,
+				0E7758D02B0B90220069AF61 /* Search */,
 			);
-			name = UI;
-			path = ..;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		0EF184FC2B0B623D00B1A1D6 /* Enums */ = {
+		0ED21BE12B0B878F002EC3B0 = {
 			isa = PBXGroup;
 			children = (
-				0EF184FD2B0B626600B1A1D6 /* TabItem.swift */,
+				0ED21BEC2B0B878F002EC3B0 /* Wetter */,
+				0ED21BEB2B0B878F002EC3B0 /* Products */,
+				0E7758C92B0B89EE0069AF61 /* Frameworks */,
 			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
-		0EF184FF2B0B665700B1A1D6 /* Tab */ = {
+		0ED21BEB2B0B878F002EC3B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EF185002B0B666B00B1A1D6 /* TabsView.swift */,
+				0ED21BEA2B0B878F002EC3B0 /* Wetter.app */,
 			);
-			path = Tab;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		0EF185022B0B6A2000B1A1D6 /* Map */ = {
+		0ED21BEC2B0B878F002EC3B0 /* Wetter */ = {
 			isa = PBXGroup;
 			children = (
+				0E7758DF2B0B91610069AF61 /* File */,
+				0E7758E02B0B91610069AF61 /* Navigation */,
+				0E7758DE2B0B904F0069AF61 /* UI */,
+				0ED21BED2B0B878F002EC3B0 /* WetterApp.swift */,
+				0ED21BEF2B0B878F002EC3B0 /* ContentView.swift */,
+				0ED21BF12B0B8791002EC3B0 /* Assets.xcassets */,
+				0ED21BF32B0B8791002EC3B0 /* Preview Content */,
 			);
-			path = Map;
+			path = Wetter;
 			sourceTree = "<group>";
 		};
-		0EF185032B0B6A3E00B1A1D6 /* Home */ = {
+		0ED21BF32B0B8791002EC3B0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				0ED21BF42B0B8791002EC3B0 /* Preview Assets.xcassets */,
 			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		0EF185042B0B6A5300B1A1D6 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Search;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EAAE1932B04D01D004EB10F /* Wetter */ = {
+		0ED21BE92B0B878F002EC3B0 /* Wetter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EAAE1A72B04D01F004EB10F /* Build configuration list for PBXNativeTarget "Wetter" */;
+			buildConfigurationList = 0ED21BF82B0B8791002EC3B0 /* Build configuration list for PBXNativeTarget "Wetter" */;
 			buildPhases = (
-				0EAAE1902B04D01D004EB10F /* Sources */,
-				0EAAE1912B04D01D004EB10F /* Frameworks */,
-				0EAAE1922B04D01D004EB10F /* Resources */,
-				0EAAE1B32B050775004EB10F /* Embed Frameworks */,
+				0ED21BE62B0B878F002EC3B0 /* Sources */,
+				0ED21BE72B0B878F002EC3B0 /* Frameworks */,
+				0ED21BE82B0B878F002EC3B0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -176,25 +120,25 @@
 			);
 			name = Wetter;
 			productName = Wetter;
-			productReference = 0EAAE1942B04D01D004EB10F /* Wetter.app */;
+			productReference = 0ED21BEA2B0B878F002EC3B0 /* Wetter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0EAAE18C2B04D01D004EB10F /* Project object */ = {
+		0ED21BE22B0B878F002EC3B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					0EAAE1932B04D01D004EB10F = {
-						CreatedOnToolsVersion = 15.0;
+					0ED21BE92B0B878F002EC3B0 = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 0EAAE18F2B04D01D004EB10F /* Build configuration list for PBXProject "Wetter" */;
+			buildConfigurationList = 0ED21BE52B0B878F002EC3B0 /* Build configuration list for PBXProject "Wetter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,47 +146,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 0EAAE18B2B04D01D004EB10F;
-			productRefGroup = 0EAAE1952B04D01D004EB10F /* Products */;
+			mainGroup = 0ED21BE12B0B878F002EC3B0;
+			productRefGroup = 0ED21BEB2B0B878F002EC3B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EAAE1932B04D01D004EB10F /* Wetter */,
+				0ED21BE92B0B878F002EC3B0 /* Wetter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0EAAE1922B04D01D004EB10F /* Resources */ = {
+		0ED21BE82B0B878F002EC3B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAAE19F2B04D01F004EB10F /* Preview Assets.xcassets in Resources */,
-				0EAAE19C2B04D01F004EB10F /* Assets.xcassets in Resources */,
-				0EAAE1AB2B04D3E9004EB10F /* File in Resources */,
+				0E7758D82B0B90220069AF61 /* Search in Resources */,
+				0E7758DB2B0B90220069AF61 /* Map in Resources */,
+				0E7758E22B0B91610069AF61 /* Navigation in Resources */,
+				0E7758E12B0B91610069AF61 /* File in Resources */,
+				0ED21BF52B0B8791002EC3B0 /* Preview Assets.xcassets in Resources */,
+				0E7758D72B0B90220069AF61 /* Home in Resources */,
+				0ED21BF22B0B8791002EC3B0 /* Assets.xcassets in Resources */,
+				0E7758D62B0B90220069AF61 /* Components in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0EAAE1902B04D01D004EB10F /* Sources */ = {
+		0ED21BE62B0B878F002EC3B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF185012B0B666B00B1A1D6 /* TabsView.swift in Sources */,
-				0EAAE1A12B04D01F004EB10F /* Persistence.swift in Sources */,
-				0EAAE19A2B04D01D004EB10F /* ContentView.swift in Sources */,
-				0EAAE1A42B04D01F004EB10F /* Wetter.xcdatamodeld in Sources */,
-				0EF184FE2B0B626600B1A1D6 /* TabItem.swift in Sources */,
-				0EAAE1982B04D01D004EB10F /* WetterApp.swift in Sources */,
+				0ED21BF02B0B878F002EC3B0 /* ContentView.swift in Sources */,
+				0ED21BEE2B0B878F002EC3B0 /* WetterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0EAAE1A52B04D01F004EB10F /* Debug */ = {
+		0ED21BF62B0B8791002EC3B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -305,7 +250,7 @@
 			};
 			name = Debug;
 		};
-		0EAAE1A62B04D01F004EB10F /* Release */ = {
+		0ED21BF72B0B8791002EC3B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -361,7 +306,7 @@
 			};
 			name = Release;
 		};
-		0EAAE1A82B04D01F004EB10F /* Debug */ = {
+		0ED21BF92B0B8791002EC3B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -377,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,13 +330,16 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.svenkreussler.Wetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		0EAAE1A92B04D01F004EB10F /* Release */ = {
+		0ED21BFA2B0B8791002EC3B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -406,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,47 +363,37 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.svenkreussler.Wetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EAAE18F2B04D01D004EB10F /* Build configuration list for PBXProject "Wetter" */ = {
+		0ED21BE52B0B878F002EC3B0 /* Build configuration list for PBXProject "Wetter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0EAAE1A52B04D01F004EB10F /* Debug */,
-				0EAAE1A62B04D01F004EB10F /* Release */,
+				0ED21BF62B0B8791002EC3B0 /* Debug */,
+				0ED21BF72B0B8791002EC3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EAAE1A72B04D01F004EB10F /* Build configuration list for PBXNativeTarget "Wetter" */ = {
+		0ED21BF82B0B8791002EC3B0 /* Build configuration list for PBXNativeTarget "Wetter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0EAAE1A82B04D01F004EB10F /* Debug */,
-				0EAAE1A92B04D01F004EB10F /* Release */,
+				0ED21BF92B0B8791002EC3B0 /* Debug */,
+				0ED21BFA2B0B8791002EC3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0EAAE1A22B04D01F004EB10F /* Wetter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0EAAE1A32B04D01F004EB10F /* Wetter.xcdatamodel */,
-			);
-			currentVersion = 0EAAE1A32B04D01F004EB10F /* Wetter.xcdatamodel */;
-			path = Wetter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 0EAAE18C2B04D01D004EB10F /* Project object */;
+	rootObject = 0ED21BE22B0B878F002EC3B0 /* Project object */;
 }
