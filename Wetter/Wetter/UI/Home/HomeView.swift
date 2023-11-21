@@ -13,6 +13,7 @@ struct HomeView: View {
         
         
         TabView {
+            
             ForEach(LocationItem.allCases, id: \.rawValue) {
                 item in
                 VStack(spacing: 12) {
@@ -20,10 +21,12 @@ struct HomeView: View {
                         .font(.largeTitle)
                     Text(item.title)
                         .font(.headline)
+                    CardViewVohersage()
                 }
                 .frame(width: 200, height: 200)
                 
             }
+            
         }
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
