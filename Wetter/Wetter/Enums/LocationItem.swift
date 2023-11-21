@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
+
 
 enum LocationItem: String, CaseIterable {
     //TODO: Hier definieren ´Zeitansage´ und ´Wettervorhersage´ geladen werden und was für Eigenschaften das Enum hat
