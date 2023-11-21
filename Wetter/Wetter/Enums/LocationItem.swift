@@ -9,7 +9,7 @@ import Foundation
 
 
 enum LocationItem: String, CaseIterable {
-    //TODO: Hier definieren ´Zeitansage´ und ´Wettervorhersage´ geladen werden und was für Eigenschaften das Enum hat
+    //TODO: Hier definieren ´Zeitansage´ ´Wettervorhersage´ was für Eigenschaften das Enum hat
     
     case berlin, münchen, hamburg
     
@@ -21,6 +21,7 @@ enum LocationItem: String, CaseIterable {
             return "München"
         case .hamburg:
             return "Hamburg"
+        
         }
     }
     

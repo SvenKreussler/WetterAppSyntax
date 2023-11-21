@@ -9,7 +9,7 @@ import Foundation
 
 enum TagesvohersageItem: String, CaseIterable {
     
-    case jetzt, vierstunden, achtstunden, zwölfstunden
+    case jetzt, vierstunden, achtstunden, zwölfstunden, sechszehnstunden, zwanzigstunden, vierundzwanzigstunden
     
     var title: String {
         switch self {
@@ -21,6 +21,12 @@ enum TagesvohersageItem: String, CaseIterable {
             return "+8h"
         case .zwölfstunden:
             return "+12h"
+        case .sechszehnstunden:
+            return "+16h"
+        case .zwanzigstunden:
+            return "+20h"
+        case .vierundzwanzigstunden:
+            return "+24h"
         }
     }
     
@@ -34,6 +40,12 @@ enum TagesvohersageItem: String, CaseIterable {
             return "18"
         case .zwölfstunden:
             return "27"
+        case .sechszehnstunden:
+            return "23"
+        case .zwanzigstunden:
+            return "13"
+        case .vierundzwanzigstunden:
+            return "24"
         }
     }
     
@@ -47,6 +59,12 @@ enum TagesvohersageItem: String, CaseIterable {
             return "sun.max"
         case .zwölfstunden:
             return "cloud.sun"
+        case .sechszehnstunden:
+            return "cloud"
+        case .zwanzigstunden:
+            return "sun.max"
+        case .vierundzwanzigstunden:
+            return "sun.haze"
         }
     }
 }

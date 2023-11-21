@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         
+        
+        
         TabView {
             ForEach(LocationItem.allCases, id: \.rawValue) {
                 item in
