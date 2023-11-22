@@ -21,13 +21,18 @@ struct HomeView: View {
                     
                     CardViewVohersage()
                         .frame(width: 300, height: 150)
-                        
+                        .padding(24)
+                        .background(Color.blue)
+                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                    CardViewWochenVohersage()
+                        .frame(width: 300, height: 200)
+                        .padding(24)
                         .background(Color.blue)
                         .clipShape(RoundedRectangle(cornerRadius: 24))
                     
                     
                 }
-            }.padding(48)
+            }
             
         }
         .tabViewStyle(.page)

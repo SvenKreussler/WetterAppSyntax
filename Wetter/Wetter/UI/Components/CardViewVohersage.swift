@@ -9,15 +9,15 @@ import SwiftUI
 
 struct CardViewVohersage: View {
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 0) {
             ScrollView(.horizontal, showsIndicators: false) {
                 Text("Aktuelle Zeitansage")
-                    .padding(.trailing, 160)
+                    .padding(.trailing, 100)
                 Divider()
+                    .frame(height: 0.5)
+                    .overlay(.black)
                 
-                    HStack {
-                        
-                        ForEach(TagesvohersageItem.allCases, id:\.rawValue) { item in
+                HStack { ForEach(TagesvohersageItem.allCases, id:\.rawValue) { item in
                             VStack() {
                                 
                                 Text(item.title)
@@ -29,7 +29,6 @@ struct CardViewVohersage: View {
                             }
                         }
                     }
-                
             }
         }
     }
