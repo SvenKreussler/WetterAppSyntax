@@ -9,9 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        
-        
-        
         TabView {
             
             ForEach(LocationItem.allCases, id: \.rawValue) {
@@ -21,11 +18,16 @@ struct HomeView: View {
                         .font(.largeTitle)
                     Text(item.title)
                         .font(.headline)
+                    
                     CardViewVohersage()
+                        .frame(width: 300, height: 150)
+                        
+                        .background(Color.blue)
+                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                    
+                    
                 }
-                .frame(width: 200, height: 200)
-                
-            }
+            }.padding(48)
             
         }
         .tabViewStyle(.page)
