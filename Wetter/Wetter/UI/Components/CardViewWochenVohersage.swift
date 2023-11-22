@@ -10,17 +10,20 @@ import SwiftUI
 struct CardViewWochenVohersage: View {
     var body: some View {
         
-        VStack(spacing: 0){
+        VStack(alignment: .leading){
             ScrollView(.vertical, showsIndicators: false) {
                 Text("Vohersage für 7 Tage")
-                    .padding(.trailing, 100)
+                    .padding(.trailing, 120)
                 ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
                     item in
                     Divider()
-                        .frame(height: 0.75)
-                        .overlay(.black)
+//                        .frame(height: 0.5)
+//                        .overlay(.black)
+// Wirkt inkonsistent fünftes und viertes Element haben eine dickere Linie
+                    
                     HStack {
                         Text(item.title)
+                        
                         Text(item.degrees)
                         Image(systemName: item.icon)
                             .resizable()

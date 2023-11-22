@@ -30,7 +30,6 @@ struct HomeView: View {
                         .background(Color.blue)
                         .clipShape(RoundedRectangle(cornerRadius: 24))
                     
-                    
                 }
             }
             

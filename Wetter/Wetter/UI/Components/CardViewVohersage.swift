@@ -9,10 +9,14 @@ import SwiftUI
 
 struct CardViewVohersage: View {
     var body: some View {
-        VStack(spacing: 0) {
+        
+        VStack(alignment: .leading) {
+            Text("Aktuelle Zeitansage")
+                .frame(width:200, height: 20, alignment: .leading)
+            
+            
             ScrollView(.horizontal, showsIndicators: false) {
-                Text("Aktuelle Zeitansage")
-                    .padding(.trailing, 100)
+                
                 Divider()
                     .frame(height: 0.5)
                     .overlay(.black)
