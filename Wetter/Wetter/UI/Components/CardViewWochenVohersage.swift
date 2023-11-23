@@ -14,7 +14,6 @@ struct CardViewWochenVohersage: View {
             Text("Vohersage für 7 Tage")
                 .frame(width:200, height: 20, alignment: .leading)
             ScrollView(.vertical, showsIndicators: false) {
-                
                 ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
                     item in
                     Divider()

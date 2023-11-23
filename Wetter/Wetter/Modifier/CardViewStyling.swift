@@ -10,9 +10,9 @@ import SwiftUI
 struct CardViewStyling: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(width: 300, height: 150)
+            
             .padding(24)
-            .background(Color.gray)
+            .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 24))
     }
 }

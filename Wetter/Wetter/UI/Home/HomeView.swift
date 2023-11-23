@@ -7,33 +7,52 @@
 
 import SwiftUI
 
+//let backgroundGradient = LinearGradient(
+//    colors: [Color.red, Color.green],
+//    startPoint: .top, endPoint: .bottom)
+
 struct HomeView: View {
     var body: some View {
-        TabView {
-            
-            ForEach(LocationItem.allCases, id: \.rawValue) {
-                item in
-                VStack(spacing: 24) {
-                    Image(systemName: item.icon)
-                        .font(.largeTitle)
-                    Text(item.title)
-                        .font(.headline)
-                    
-                    CardViewVohersage()
-                        .cardViewStyling()
+        
+//        ZStack {
+//            backgroundGradient
+//                .ignoresSafeArea()
+            TabView {
+                ForEach(LocationItem.allCases, id: \.rawValue) {
+                    item in
+                    VStack(spacing: 48) {
                         
-                    CardViewWochenVohersage()
-                        .cardViewStyling()
-
-                    
+                        Text(item.title)
+                            .font(.largeTitle)
+                            .bold()
+                        Image(systemName: item.icon)
+                            .font(.system(size: 96))
+                        
+                        
+                        CardViewVohersage()
+                            .cardViewStyling()
+                            .frame(width: 350, height: 100)
+                        
+                        CardViewWochenVohersage()
+                            .cardViewStyling()
+                            .frame(width: 350, height: 300)
+                            //.sheet(item: $sheet)
+                        
+                    }
                 }
+                
             }
             
-        }
-        .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+        
     }
+    //MARK: - Variables
+
+    //@State private var sheet: Bool
 }
+
+
 
 #Preview {
     HomeView()

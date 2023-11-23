@@ -7,12 +7,15 @@
 
 import SwiftUI
 
+
+
 struct CardViewVohersage: View {
     var body: some View {
         
         VStack(alignment: .leading) {
             Text("Aktuelle Zeitansage")
-                .frame(width: 200, height: 40, alignment: .leading)
+                .frame(alignment: .leading)
+                
             ScrollView(.horizontal, showsIndicators: false) {
                 
                 Divider()
@@ -23,11 +26,15 @@ struct CardViewVohersage: View {
                             VStack() {
                                 
                                 Text(item.title)
+                                    
+
                                 Text(item.degree)
+                                    
                                 Image(systemName: item.icon)
-                                    .resizable()
+                                    
+                                    
                                     .scaledToFit()
-                                    .frame(width:20, height:20)
+                                    
                             }
                         }
                     }
