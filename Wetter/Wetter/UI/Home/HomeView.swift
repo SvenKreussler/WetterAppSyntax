@@ -13,22 +13,18 @@ struct HomeView: View {
             
             ForEach(LocationItem.allCases, id: \.rawValue) {
                 item in
-                VStack(spacing: 12) {
+                VStack(spacing: 24) {
                     Image(systemName: item.icon)
                         .font(.largeTitle)
                     Text(item.title)
                         .font(.headline)
                     
                     CardViewVohersage()
-                        .frame(width: 300, height: 150)
-                        .padding(24)
-                        .background(Color.blue)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .cardViewStyling()
+                        
                     CardViewWochenVohersage()
-                        .frame(width: 300, height: 200)
-                        .padding(24)
-                        .background(Color.blue)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .cardViewStyling()
+
                     
                 }
             }

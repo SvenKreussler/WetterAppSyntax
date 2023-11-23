@@ -11,15 +11,14 @@ struct CardViewWochenVohersage: View {
     var body: some View {
         
         VStack(alignment: .leading){
+            Text("Vohersage für 7 Tage")
+                .frame(width:200, height: 20, alignment: .leading)
             ScrollView(.vertical, showsIndicators: false) {
-                Text("Vohersage für 7 Tage")
-                    .padding(.trailing, 120)
+                
                 ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
                     item in
                     Divider()
-//                        .frame(height: 0.5)
-//                        .overlay(.black)
-// Wirkt inkonsistent fünftes und viertes Element haben eine dickere Linie
+
                     
                     HStack {
                         Text(item.title)
@@ -29,6 +28,7 @@ struct CardViewWochenVohersage: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)
+                        Spacer()
                     }
                 }
                 

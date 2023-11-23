@@ -12,9 +12,7 @@ struct CardViewVohersage: View {
         
         VStack(alignment: .leading) {
             Text("Aktuelle Zeitansage")
-                .frame(width:200, height: 20, alignment: .leading)
-            
-            
+                .frame(width: 200, height: 40, alignment: .leading)
             ScrollView(.horizontal, showsIndicators: false) {
                 
                 Divider()
