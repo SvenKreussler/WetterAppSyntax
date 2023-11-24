@@ -11,6 +11,7 @@
 		0E65AEAC2B0E264200331457 /* WochenvohersageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65AEAB2B0E264200331457 /* WochenvohersageItem.swift */; };
 		0E65AEAE2B0E299100331457 /* CardViewWochenVohersage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65AEAD2B0E299100331457 /* CardViewWochenVohersage.swift */; };
 		0E65AEB12B0F551000331457 /* DefaultBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65AEB02B0F551000331457 /* DefaultBackground.swift */; };
+		0E6967BE2B10AE3700FA1943 /* WeatherFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6967BD2B10AE3700FA1943 /* WeatherFeaturesView.swift */; };
 		0E7758E12B0B91610069AF61 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0E7758DF2B0B91610069AF61 /* File */; };
 		0E7758E42B0B92110069AF61 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7758E32B0B92110069AF61 /* TabsView.swift */; };
 		0E7758E62B0B92140069AF61 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7758E52B0B92140069AF61 /* TabItem.swift */; };
@@ -33,6 +34,7 @@
 		0E65AEAB2B0E264200331457 /* WochenvohersageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WochenvohersageItem.swift; sourceTree = "<group>"; };
 		0E65AEAD2B0E299100331457 /* CardViewWochenVohersage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewWochenVohersage.swift; sourceTree = "<group>"; };
 		0E65AEB02B0F551000331457 /* DefaultBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBackground.swift; sourceTree = "<group>"; };
+		0E6967BD2B10AE3700FA1943 /* WeatherFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFeaturesView.swift; sourceTree = "<group>"; };
 		0E7758CA2B0B89EE0069AF61 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0E7758DF2B0B91610069AF61 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		0E7758E32B0B92110069AF61 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				0E79A60D2B0F954900F5528F /* WeatherFeaturesSelectDay.swift */,
+				0E6967BD2B10AE3700FA1943 /* WeatherFeaturesView.swift */,
 			);
 			path = WeatherFeatures;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				0E7758F82B0CAA4D0069AF61 /* HomeView.swift in Sources */,
 				0E7758E62B0B92140069AF61 /* TabItem.swift in Sources */,
 				0ED21BEE2B0B878F002EC3B0 /* WetterApp.swift in Sources */,
+				0E6967BE2B10AE3700FA1943 /* WeatherFeaturesView.swift in Sources */,
 				0E65AEAC2B0E264200331457 /* WochenvohersageItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

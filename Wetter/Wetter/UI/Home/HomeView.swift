@@ -36,7 +36,7 @@ struct HomeView: View {
                         CardViewWochenVohersage()
                             .cardViewStyling()
                             .frame(width: 350, height: 300)
-                            //.sheet(item: $sheet)
+                            
                         
                     }
                 }
@@ -49,7 +49,7 @@ struct HomeView: View {
     }
     //MARK: - Variables
 
-    //@State private var sheet: Bool
+    
 }
 
 

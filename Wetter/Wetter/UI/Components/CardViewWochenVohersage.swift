@@ -10,15 +10,13 @@ import SwiftUI
 struct CardViewWochenVohersage: View {
     var body: some View {
         
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text("Vohersage für 7 Tage")
                 .frame(width:200, height: 20, alignment: .leading)
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
                     item in
                     Divider()
-
-                    
                     HStack {
                         Text(item.title)
                         
@@ -30,11 +28,24 @@ struct CardViewWochenVohersage: View {
                         Spacer()
                     }
                 }
-                
+                .onTapGesture {
+                    shouldShowEditTask = true
+                }
+                .sheet(isPresented: $shouldShowEditTask){
+                    WeatherFeaturesView()
+                    
+                    
+                }
             }
         }
+        
+        
+        
+        
+        
     }
     
+    @State private var shouldShowEditTask = false
 }
 
 
