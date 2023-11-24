@@ -9,7 +9,7 @@ import Foundation
 
 enum TabItem {
     
-    case home , maps, search
+    case home, maps, search
     
     var title: String {
         switch self {

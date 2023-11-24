@@ -26,13 +26,9 @@ struct CardViewVohersage: View {
                             VStack() {
                                 
                                 Text(item.title)
-                                    
-
                                 Text(item.degree)
                                     
                                 Image(systemName: item.icon)
-                                    
-                                    
                                     .scaledToFit()
                                     
                             }
