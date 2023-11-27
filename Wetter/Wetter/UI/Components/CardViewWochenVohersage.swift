@@ -32,20 +32,21 @@ struct CardViewWochenVohersage: View {
                     shouldShowEditTask = true
                 }
                 .sheet(isPresented: $shouldShowEditTask){
-                    WeatherFeaturesView()
-                    
+                    HStack {
+                        
+                        WeatherFeaturesView(isPresented: $shouldShowEditTask)
+                        
+                        
+                    }
                     
                 }
             }
         }
         
-        
-        
-        
-        
+   
     }
     
-    @State private var shouldShowEditTask = false
+    @State var shouldShowEditTask = false
 }
 
 

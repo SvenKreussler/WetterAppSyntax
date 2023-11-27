@@ -9,14 +9,28 @@ import SwiftUI
 
 struct WeatherFeaturesView: View {
     
+    //https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself
+    //MARK: - Variables
+    @Binding var isPresented: Bool 
+    
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        
+        HStack(alignment: .top, spacing: 80) {
             WeatherFeaturesSelectDay()
+            Button {
+                print("this is fine")
+                isPresented = false
+            } label: {
+                Image(systemName: "x.circle")
+                    .font(.title)
+            }
+            
         }
     }
     
 }
 
 #Preview {
-    WeatherFeaturesView()
+    WeatherFeaturesView(isPresented: .constant(true))
 }
