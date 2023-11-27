@@ -8,32 +8,27 @@
 import SwiftUI
 
 struct WeatherFeaturesSelectDay: View {
-    
-    
-    
     var body: some View {
         
         
         VStack {
-            HStack(spacing: 80) {
-                Text("Wetterlage für Tag")
-                
-                
-            }
+            Text("Wetterlage")
+
             HStack { ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
-                item in
+                //TODO: Modell anpassen, das gewählter Tag auch selektiert wird
                 
+                item in
                 VStack() {
-                    Text(item.title.prefix(2))
-                    //Spacer()
-                    
+                        Text(item.title.prefix(2))
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(Color.white)
+                            .background(Color.blue)
+                            .clipShape(Circle())
+                        
+                    }
                 }
             }
-            }
         }
-        
-        
-        
     }
 }
 
