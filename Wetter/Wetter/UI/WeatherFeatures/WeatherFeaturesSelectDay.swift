@@ -11,7 +11,7 @@ struct WeatherFeaturesSelectDay: View {
     var body: some View {
         
         
-        VStack {
+        VStack(alignment: .leading) {
             Text("Wetterlage")
 
             HStack { ForEach(WochenvohersageItem.allCases, id:\.rawValue) {

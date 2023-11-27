@@ -30,31 +30,27 @@ struct CardViewWochenVohersage: View {
                         }
                         
                     }.contentShape(Rectangle())
-                    .onTapGesture {
-                        shouldShowEditTask = true
-                    }
+                        .onTapGesture {
+                            shouldShowEditTask = true
+                        }
                     
-                    .sheet(isPresented: $shouldShowEditTask){
-                        //MARK: - Feature Sheet
-                        
-                        HStack {
+                        .sheet(isPresented: $shouldShowEditTask){
+                            //MARK: - Feature Sheet
                             
-                            VStack {
+                            HStack {
                                 
-                                WeatherFeaturesViewSheet(isPresented: $shouldShowEditTask)
-                                
-                            }
+                                VStack {
+                                    WeatherFeaturesViewSheet(isPresented: $shouldShowEditTask)
+   
+                                }
+                            }.padding(30)
                             
-                            
-                            
-                        }.padding(30)
-                        
-                    }
+                        }
                 }
             }
         }
         
-   
+        
     }
     
     @State var shouldShowEditTask = false
