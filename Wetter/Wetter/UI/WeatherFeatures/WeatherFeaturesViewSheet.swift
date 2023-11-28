@@ -17,7 +17,7 @@ struct WeatherFeaturesViewSheet: View {
     
     var body: some View {
         
-        HStack(alignment: .top, spacing: 70){
+        HStack(alignment: .top, spacing: 80){
             WeatherFeaturesSelectDay()
                 
             Button {
@@ -25,17 +25,21 @@ struct WeatherFeaturesViewSheet: View {
                 isPresented = false
             } label: {
                 Image(systemName: "x.circle")
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.gray)
-                    .background(Color.black).grayscale(0.50)
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .font(.system(size: 30))
+                    .tint(Color.gray)
+                    .buttonStyle(.borderedProminent)
+                    .clipShape(Circle())
             }
             
         }
         
         Divider()
             
-        //WeatherFeaturesChart()
+        
+        
+        FeaturesSelectButton()
+        
+        WeatherFeaturesChart()
         
     }
     

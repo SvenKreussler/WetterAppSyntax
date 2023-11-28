@@ -18,26 +18,22 @@ struct FeaturesSelectButton: View {
                 Image(systemName: WochenvohersageItem.heute.icon)
                     .font(.largeTitle)
             }
-            
-            Button(action: {
-                List {
-                    ForEach(WeatherFeatureItem.allCases, id:\.rawValue) { item in
-                        Text(item.title)
-                        Image(systemName: item.icon)
-                    }
+            Picker("", selection: $selectedFeature) {
+                ForEach(WeatherFeatureItem.allCases, id:\.self) { item in
+                    Image(systemName: item.icon)
+                        
                 }
-                
-                
-            }, label: {
-                Image(systemName: WeatherFeatureItem.rainChance.icon)
-                Image(systemName: "arrow.down")
-            })
-            .tint(Color.gray)
-            .buttonStyle(.borderedProminent)
-            .clipShape(.capsule)
+            }.pickerStyle(.menu)
+                .tint(Color.gray)
+                .buttonStyle(.borderedProminent)
+                .clipShape(Capsule())
+            
+
         }
         
     }
+    //MARK: - Variables
+    @State private var selectedFeature: WeatherFeatureItem = .rainChance
 }
 
 #Preview {
