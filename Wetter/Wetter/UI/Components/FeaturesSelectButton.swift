@@ -18,15 +18,18 @@ struct FeaturesSelectButton: View {
                 Image(systemName: WochenvohersageItem.heute.icon)
                     .font(.largeTitle)
             }
-            Picker("", selection: $selectedFeature) {
+            Picker("this is a test", selection: $selectedFeature) {
                 ForEach(WeatherFeatureItem.allCases, id:\.self) { item in
                     Image(systemName: item.icon)
-                        
-                }
+                    
+                
+                }.blur(radius: 20)
             }.pickerStyle(.menu)
                 .tint(Color.gray)
                 .buttonStyle(.borderedProminent)
                 .clipShape(Capsule())
+                
+                
             
 
         }

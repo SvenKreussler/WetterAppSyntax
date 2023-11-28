@@ -27,6 +27,7 @@
 		0E7759042B0CD68A0069AF61 /* CardViewVohersage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7759032B0CD68A0069AF61 /* CardViewVohersage.swift */; };
 		0E79A60B2B0F8ED700F5528F /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A60A2B0F8ED700F5528F /* CustomColors.swift */; };
 		0E79A60E2B0F954900F5528F /* WeatherFeaturesSelectDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A60D2B0F954900F5528F /* WeatherFeaturesSelectDay.swift */; };
+		0EBA633D2B16212C0001F895 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA633C2B16212C0001F895 /* Location.swift */; };
 		0ED21BEE2B0B878F002EC3B0 /* WetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED21BED2B0B878F002EC3B0 /* WetterApp.swift */; };
 		0ED21BF02B0B878F002EC3B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED21BEF2B0B878F002EC3B0 /* ContentView.swift */; };
 		0ED21BF22B0B8791002EC3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED21BF12B0B8791002EC3B0 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		0E7759032B0CD68A0069AF61 /* CardViewVohersage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewVohersage.swift; sourceTree = "<group>"; };
 		0E79A60A2B0F8ED700F5528F /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		0E79A60D2B0F954900F5528F /* WeatherFeaturesSelectDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFeaturesSelectDay.swift; sourceTree = "<group>"; };
+		0EBA633C2B16212C0001F895 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		0ED21BEA2B0B878F002EC3B0 /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED21BED2B0B878F002EC3B0 /* WetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetterApp.swift; sourceTree = "<group>"; };
 		0ED21BEF2B0B878F002EC3B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,11 +166,12 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
-		0E7758F42B0B9F6D0069AF61 /* Model */ = {
+		0E7758F42B0B9F6D0069AF61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0EBA63382B1621000001F895 /* Weather */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		0E79A6072B0F8E8900F5528F /* Extensions */ = {
@@ -188,6 +191,22 @@
 				0E0B2BA62B14CFCF00DDB408 /* WeatherFeaturesSelectFeatures.swift */,
 			);
 			path = WeatherFeatures;
+			sourceTree = "<group>";
+		};
+		0EBA63382B1621000001F895 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA63392B1621090001F895 /* Location */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		0EBA63392B1621090001F895 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA633C2B16212C0001F895 /* Location.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		0ED21BE12B0B878F002EC3B0 = {
@@ -214,7 +233,7 @@
 				0E7758DF2B0B91610069AF61 /* File */,
 				0E7758DE2B0B904F0069AF61 /* UI */,
 				0E7758EC2B0B92AE0069AF61 /* Navigation */,
-				0E7758F42B0B9F6D0069AF61 /* Model */,
+				0E7758F42B0B9F6D0069AF61 /* Models */,
 				0E7758ED2B0B92E40069AF61 /* Enums */,
 				0E65AEAF2B0F549400331457 /* Modifier */,
 				0ED21BED2B0B878F002EC3B0 /* WetterApp.swift */,
@@ -316,6 +335,7 @@
 				0E0B2BA72B14CFCF00DDB408 /* WeatherFeaturesSelectFeatures.swift in Sources */,
 				0E0B2BAD2B14D49000DDB408 /* FeaturesSelectButton.swift in Sources */,
 				0E65AEAE2B0E299100331457 /* CardViewWochenVohersage.swift in Sources */,
+				0EBA633D2B16212C0001F895 /* Location.swift in Sources */,
 				0E65AEB12B0F551000331457 /* DefaultBackground.swift in Sources */,
 				0ED21BF02B0B878F002EC3B0 /* ContentView.swift in Sources */,
 				0E79A60B2B0F8ED700F5528F /* CustomColors.swift in Sources */,

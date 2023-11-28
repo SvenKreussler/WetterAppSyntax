@@ -12,8 +12,6 @@ import Charts
 
 
 
-
-
 struct WeatherFeaturesChart: View {
     
     var body: some View {

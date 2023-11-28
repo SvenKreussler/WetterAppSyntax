@@ -48,7 +48,7 @@ struct HomeView: View {
         
     }
     //MARK: - Variables
-
+    
     
 }
 

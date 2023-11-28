@@ -38,7 +38,6 @@ struct CardViewWochenVohersage: View {
                             //MARK: - Feature Sheet
                             
                             HStack {
-                                
                                 VStack {
                                     WeatherFeaturesViewSheet(isPresented: $shouldShowEditTask)
    
