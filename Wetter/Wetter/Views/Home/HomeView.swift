@@ -18,7 +18,7 @@ struct HomeView: View {
 //            backgroundGradient
 //                .ignoresSafeArea()
             TabView {
-                ForEach(LocationItem.allCases, id: \.rawValue) {
+                ForEach(LocationItem.allCases, id: \.self) {
                     item in
                     VStack(spacing: 48) {
                         

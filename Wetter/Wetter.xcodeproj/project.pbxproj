@@ -92,7 +92,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0E7758DE2B0B904F0069AF61 /* UI */ = {
+		0E7758DE2B0B904F0069AF61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				0E79A60C2B0F951700F5528F /* WeatherFeatures */,
@@ -101,7 +101,7 @@
 				0E7758EB2B0B929A0069AF61 /* Search */,
 				0E7758E82B0B92800069AF61 /* Components */,
 			);
-			path = UI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0E7758E82B0B92800069AF61 /* Components */ = {
@@ -231,7 +231,7 @@
 			children = (
 				0E79A6072B0F8E8900F5528F /* Extensions */,
 				0E7758DF2B0B91610069AF61 /* File */,
-				0E7758DE2B0B904F0069AF61 /* UI */,
+				0E7758DE2B0B904F0069AF61 /* Views */,
 				0E7758EC2B0B92AE0069AF61 /* Navigation */,
 				0E7758F42B0B9F6D0069AF61 /* Models */,
 				0E7758ED2B0B92E40069AF61 /* Enums */,
