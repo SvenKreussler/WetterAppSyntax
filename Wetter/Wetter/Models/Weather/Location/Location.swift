@@ -8,16 +8,25 @@
 import Foundation
 
 struct LocationSearch: Identifiable {
-    var id: UUID
+    var id = UUID()
     var name: String
     var lat: Double
     var lon: Double
 }
 
-//struct APIKeys {
-//    static var weatherAPIKey = "29ab9d965c5e4da691c9d5979ff10190"
+//struct LocationResult: Codable {
+//    let results: [Location]
 //}
 //
+//struct Location: Codable {
+//    
+//    var name: String
+//    var lat: Double
+//    var lon: Double
+//    var country: String
+//}
+
+
 //struct RequestName: Codable {
 //    var name: String
 //}
