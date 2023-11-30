@@ -22,16 +22,12 @@ struct FeaturesSelectButton: View {
                 ForEach(WeatherFeatureItem.allCases, id: \.self) { item in
                     Image(systemName: item.icon)
                     
-                
+                    
                 }.blur(radius: 20)
             }.pickerStyle(.menu)
                 .tint(Color.gray)
                 .buttonStyle(.borderedProminent)
                 .clipShape(Capsule())
-                
-                
-            
-
         }
         
     }

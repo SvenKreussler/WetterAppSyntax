@@ -22,7 +22,7 @@ struct CardViewVohersage: View {
                     .frame(height: 0.5)
                     .overlay(.black)
                 
-                HStack { ForEach(TagesvohersageItem.allCases, id: \.rawValue) { item in
+                HStack(spacing: 24) { ForEach(TagesvohersageItem.allCases, id: \.rawValue) { item in
                     VStack {
                         
                         Text(item.title)

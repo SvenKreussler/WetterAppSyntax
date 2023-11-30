@@ -24,6 +24,7 @@ struct HomeView: View {
                             .font(.largeTitle)
                             .bold()
                         Image(systemName: item.icon)
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
                             .font(.system(size: 96))
                         
                         
@@ -34,8 +35,6 @@ struct HomeView: View {
                         CardViewWochenVohersage()
                             .cardViewStyling()
                             .frame(width: 350, height: 300)
-                            
-                        
                     }
                 }
                 

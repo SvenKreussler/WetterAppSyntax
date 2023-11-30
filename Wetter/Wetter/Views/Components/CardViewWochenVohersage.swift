@@ -17,10 +17,13 @@ struct CardViewWochenVohersage: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(WochenvohersageItem.allCases, id: \.rawValue) { item in
                         Divider()
-                        HStack {
-                            Text(item.title)
+                        HStack() {
+                            Text(item.title.prefix(2))
+                                .frame(width: 60, height: 20)
                             
                             Text(item.degrees)
+                                .frame(width: 25, height: 20)
+                                
                             Image(systemName: item.icon)
                                 .resizable()
                                 .scaledToFit()
