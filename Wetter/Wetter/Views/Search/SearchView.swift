@@ -8,8 +8,8 @@
 import SwiftUI
 
 
-//https://youtu.be/e0eO1di0cPY?t=1413
-//string mit textfield auf server suchen 
+// https://youtu.be/e0eO1di0cPY?t=1413
+// string mit textfield auf server suchen
 
 struct SearchView: View {
     
@@ -21,8 +21,7 @@ struct SearchView: View {
         
         
         
-            List(locationsList) {
-                item in
+            List(locationsList) { item in
                 VStack {
                     Text(item.name)
                         .font(.system(size: 46))
@@ -30,9 +29,9 @@ struct SearchView: View {
                 .frame(width: 300, height: 100)
                 .cardViewStyling()
             }.listStyle(.plain)
-            //.searchable(text: Void())
-        //MARK: - Variables
-        //@binding let searchLocation: String
+            // .searchable(text: Void())
+        // MARK: - Variables
+        // @binding let searchLocation: String
     }
     
     

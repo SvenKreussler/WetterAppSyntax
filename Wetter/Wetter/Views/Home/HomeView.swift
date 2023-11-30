@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//let backgroundGradient = LinearGradient(
+//    let backgroundGradient = LinearGradient(
 //    colors: [Color.red, Color.green],
 //    startPoint: .top, endPoint: .bottom)
 
@@ -18,10 +18,8 @@ struct HomeView: View {
 //            backgroundGradient
 //                .ignoresSafeArea()
             TabView {
-                ForEach(LocationItem.allCases, id: \.self) {
-                    item in
+                ForEach(LocationItem.allCases, id: \.self) { item in
                     VStack(spacing: 48) {
-                        
                         Text(item.title)
                             .font(.largeTitle)
                             .bold()
@@ -47,7 +45,7 @@ struct HomeView: View {
             .indexViewStyle(.page(backgroundDisplayMode: .always))
         
     }
-    //MARK: - Variables
+    // MARK: - Variables
     
     
 }

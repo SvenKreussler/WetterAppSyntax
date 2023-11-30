@@ -10,14 +10,14 @@ import SwiftUI
 struct WeatherFeaturesViewSheet: View {
     
     
-    //MARK: - Variables
-    @Binding var isPresented: Bool 
+    // MARK: - Variables
+    @Binding var isPresented: Bool
     @State var selectFeatureButton: WeatherFeatureItem = .feelsLike
     
     
     var body: some View {
         
-        HStack(alignment: .top, spacing: 80){
+        HStack(alignment: .top, spacing: 80) {
             WeatherFeaturesSelectDay()
                 
             Button {

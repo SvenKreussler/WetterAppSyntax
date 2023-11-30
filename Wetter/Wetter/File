@@ -25,3 +25,11 @@ https://api.openweathermap.org/data/3.0/forecast/daily?lat=52,44&lon=13,40&cnt=5
 
 mapKit
 https://developer.apple.com/documentation/corelocation/converting_between_coordinates_and_user-friendly_place_names
+
+
+### TODO
+## Inspiration
+#SwiftCharts
+Den Tag in ein Donut Chart anzeigen als Verhältnis von Sonnenschein, Regen und Wolken.
+Code Beispiel: VisualizingYourAppsData/Charts/StylesDetails.swift
+

@@ -1,10 +1,10 @@
-////
-////  LocationSearchViewModel.swift
-////  Wetter
-////
-////  Created by Sven Kreußler on 29.11.23.
-////
 //
+//  LocationSearchViewModel.swift
+//  Wetter
+//
+//  Created by Sven Kreußler on 29.11.23.
+//
+
 //import Foundation
 //
 //@MainActor

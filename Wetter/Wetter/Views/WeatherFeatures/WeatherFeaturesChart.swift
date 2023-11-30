@@ -8,19 +8,21 @@
 import SwiftUI
 import Charts
 
-//https://developer.apple.com/documentation/charts/linemark
+// https://developer.apple.com/documentation/charts/linemark
 
 
 
 struct WeatherFeaturesChart: View {
     
     var body: some View {
-        Chart(TagesvohersageItem.allCases, id:\.self) {
+        Chart {
+            ForEach(TagesvohersageItem.allCases, id: \.title) { item in
                 LineMark(
-                    x: .value("Month", $0.title),
-                    y: .value("Hours of Sunshine", $0.degree)
-                )
+                    x: .value("Month", item.title),
+                    y: .value("Hours of Sunshine", item.degree)
+                ).interpolationMethod(.catmullRom)
             }
+        }
     }
 }
 

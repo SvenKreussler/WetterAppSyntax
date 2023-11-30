@@ -12,11 +12,10 @@ struct CardViewWochenVohersage: View {
         
         VStack(alignment: .leading) {
             Text("Vohersage für 7 Tage")
-                .frame(width:200, height: 20, alignment: .leading)
+                .frame(width: 200, height: 20, alignment: .leading)
             ZStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
-                        item in
+                    ForEach(WochenvohersageItem.allCases, id: \.rawValue) { item in
                         Divider()
                         HStack {
                             Text(item.title)
@@ -34,8 +33,8 @@ struct CardViewWochenVohersage: View {
                             shouldShowEditTask = true
                         }
                     
-                        .sheet(isPresented: $shouldShowEditTask){
-                            //MARK: - Feature Sheet
+                        .sheet(isPresented: $shouldShowEditTask) {
+                            // MARK: - Feature Sheet
                             
                             HStack {
                                 VStack {

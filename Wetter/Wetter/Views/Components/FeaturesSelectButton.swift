@@ -10,8 +10,8 @@ import SwiftUI
 struct FeaturesSelectButton: View {
     var body: some View {
         
-        HStack(spacing:120) {
-            //zusammenfassung des Wochentages als icon und Text
+        HStack(spacing: 120) {
+            // Zusammenfassung des Wochentages als icon und Text
             VStack {
                 Text(LocationItem.berlin.title)
                     .font(.largeTitle)
@@ -19,7 +19,7 @@ struct FeaturesSelectButton: View {
                     .font(.largeTitle)
             }
             Picker("this is a test", selection: $selectedFeature) {
-                ForEach(WeatherFeatureItem.allCases, id:\.self) { item in
+                ForEach(WeatherFeatureItem.allCases, id: \.self) { item in
                     Image(systemName: item.icon)
                     
                 
@@ -35,7 +35,7 @@ struct FeaturesSelectButton: View {
         }
         
     }
-    //MARK: - Variables
+    // MARK: - Variables
     @State private var selectedFeature: WeatherFeatureItem = .rainChance
 }
 

@@ -13,20 +13,20 @@ struct WeatherFeaturesSelectDay: View {
         
         VStack(alignment: .leading) {
             Text("Wetterlage")
-
-            HStack { ForEach(WochenvohersageItem.allCases, id:\.rawValue) {
-                //TODO: Modell anpassen, das gewählter Tag auch selektiert wird
+            
+            HStack { ForEach(WochenvohersageItem.allCases, id: \.rawValue) { item in
+                // TODO: Modell anpassen, das gewählter Tag auch selektiert wird
                 
-                item in
-                VStack() {
-                        Text(item.title.prefix(2))
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(Color.white)
-                            .background(Color.blue)
-                            .clipShape(Circle())
-                        
-                    }
+                
+                VStack {
+                    Text(item.title.prefix(2))
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .clipShape(Circle())
+                    
                 }
+            }
             }
         }
     }
