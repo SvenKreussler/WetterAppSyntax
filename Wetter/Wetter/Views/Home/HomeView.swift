@@ -7,17 +7,13 @@
 
 import SwiftUI
 
-//    let backgroundGradient = LinearGradient(
-//    colors: [Color.red, Color.green],
-//    startPoint: .top, endPoint: .bottom)
+
 
 struct HomeView: View {
     var body: some View {
         
-//        ZStack {
-//            backgroundGradient
-//                .ignoresSafeArea()
             TabView {
+                
                 ForEach(LocationItem.allCases, id: \.self) { item in
                     VStack(spacing: 48) {
                         Text(item.title)
@@ -42,6 +38,8 @@ struct HomeView: View {
             
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
+        
+            
         
     }
     // MARK: - Variables

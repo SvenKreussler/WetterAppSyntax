@@ -14,6 +14,7 @@ struct CardViewStyling: ViewModifier {
             .padding(24)
             .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 24))
+            
     }
 }
 

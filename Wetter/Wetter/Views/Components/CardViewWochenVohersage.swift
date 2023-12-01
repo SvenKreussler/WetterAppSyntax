@@ -17,7 +17,7 @@ struct CardViewWochenVohersage: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(WochenvohersageItem.allCases, id: \.rawValue) { item in
                         Divider()
-                        HStack() {
+                        HStack {
                             Text(item.title.prefix(2))
                                 .frame(width: 60, height: 20)
                             

@@ -11,6 +11,7 @@ struct TabsView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
+            
             HomeView()
                 .tabItem {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)

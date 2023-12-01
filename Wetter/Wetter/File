@@ -17,7 +17,7 @@ API Referenz:
 Städtenamen in Breiten und Längengrad auflösen:
 http://api.openweathermap.org/geo/1.0/direct?q=Berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190
 
-5 Für die nächsten fünf Tage stündlich Wetter:
+Für die nächsten fünf Tage stündlich Wetter:
 api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
 
 
