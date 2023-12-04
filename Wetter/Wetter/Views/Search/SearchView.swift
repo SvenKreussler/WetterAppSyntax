@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 
 // https://youtu.be/e0eO1di0cPY?t=1413
@@ -17,24 +18,27 @@ struct SearchView: View {
                         LocationSearch(id: UUID(), name: "München", lat: 23.23, lon: 22.22),
                         LocationSearch(id: UUID(), name: "Hamburg", lat: 23.23, lon: 23.23)]
     
+    
+    
     var body: some View {
         
         
-        
+        NavigationStack {
             List(locationsList) { item in
                 VStack {
                     Text(item.name)
                         .font(.system(size: 46))
                 }.padding(32)
-                .frame(width: 300, height: 100)
-                .cardViewStyling()
+                    .frame(width: 300, height: 100)
+                    .cardViewStyling()
             }.listStyle(.plain)
-            // .searchable(text: Void())
-        // MARK: - Variables
-        // @binding let searchLocation: String
+                .searchable(text: $searchText)
+            
+            
+        }
     }
-    
-    
+    // MARK: - Variables
+    @State private var searchText: String = ""
     
 }
 

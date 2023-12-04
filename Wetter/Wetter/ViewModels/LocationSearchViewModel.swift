@@ -5,6 +5,8 @@
 //  Created by Sven Kreußler on 29.11.23.
 
 
+// https://stackoverflow.com/questions/58012540/ios-swiftui-searchbar-and-rest-api
+
 import Foundation
 
 @MainActor
@@ -14,11 +16,11 @@ class LocationSearchViewModel: ObservableObject {
         fetchData()
     }
     
-    //MARK: - Variables
+    // MARK: - Variables
     
     @Published var locations = [LocationSearch]()
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     func fetchData() {
         Task {

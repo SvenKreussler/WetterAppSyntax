@@ -9,18 +9,24 @@ import Foundation
 
 struct LocationFeatures: Codable {
     
-    var result: [Response]
+    //let results: Response
+    //var id = UUID()
+    let current: [Current]
+
 }
 
-struct Response: Codable {
-    
-    let current: Current
-    let hourly: Hourly
-    let daily: Daily
-}
+//struct Response: Codable, Identifiable {
+//    
+//    var id = UUID()
+//    
+//    let hourly: [Hourly]
+//    let daily: [Daily]
+//    let alerts: Alerts
+//}
 
-struct Current: Codable {
+struct Current: Codable, Identifiable, Hashable {
     
+    var id = UUID()
     let dt: Int
     let temp: Double
     let feels_like: Double
@@ -46,4 +52,12 @@ struct Temp: Codable {
     let min: Double
     let max: Double
     
+}
+
+struct Alerts: Codable {
+    let sender_name: String
+    let event: String
+    let start: Int
+    let end: Int
+    let description: String
 }

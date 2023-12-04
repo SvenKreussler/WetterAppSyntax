@@ -20,6 +20,7 @@ struct FeaturesSelectButton: View {
             }
             Picker("this is a test", selection: $selectedFeature) {
                 ForEach(WeatherFeatureItem.allCases, id: \.self) { item in
+                    // Text(item.title)
                     Image(systemName: item.icon)
                     
                     

@@ -10,6 +10,8 @@ import SwiftUI
 
 
 struct CardViewVohersage: View {
+    
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -22,21 +24,38 @@ struct CardViewVohersage: View {
                     .frame(height: 0.5)
                     .overlay(.black)
                 
-                HStack(spacing: 24) { ForEach(TagesvohersageItem.allCases, id: \.rawValue) { item in
-                    VStack {
-                        
-                        Text(item.title)
-                        Text(item.degree)
-                        
-                        Image(systemName: item.icon)
-                            .scaledToFit()
-                        
-                    }
+                
+                List(locationFeaturesViewModel.weatherfeatures, id: \.self) { item in
+                    Text(String(item.dt))
+                    
+                
+                    
+                    
                 }
-                }
+//                List(locationFeaturesViewModel.weatherfeatures, id: \.id) { item in
+//                    
+//                    Text(String(item.temp))
+//                    Text("test")
+//                    
+//                    Text(String(item.dt))
+//                    Text(String(item.degree))
+//                    
+//                    Image(systemName: item.icon)
+//                        .scaledToFit()
+//                    
+//                    
+//                }
+                Text("test")
+                
             }
+            
+            
+            
         }
     }
+    // MARK: - Variables
+    
+    @StateObject private var locationFeaturesViewModel = LocationFeaturesViewModel()
 }
 
 #Preview {
