@@ -11,7 +11,7 @@ struct LocationFeatures: Codable {
     
     //let results: Response
     //var id = UUID()
-    let current: [Current]
+    let current: Current
 
 }
 
@@ -24,9 +24,9 @@ struct LocationFeatures: Codable {
 //    let alerts: Alerts
 //}
 
-struct Current: Codable, Identifiable, Hashable {
+struct Current: Codable {
     
-    var id = UUID()
+    
     let dt: Int
     let temp: Double
     let feels_like: Double

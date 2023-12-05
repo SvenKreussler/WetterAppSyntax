@@ -11,39 +11,27 @@ import Foundation
 
 class LocationFeaturesViewModel: ObservableObject {
     
-    // MARK: - Init
+    
     init() {
         fetchData()
     }
     
     // MARK: - Variables
     
-    @Published var weatherfeatures = [Current]()
+    @Published var weatherfeatures = LocationFeatures(current: Current(dt: 0, temp: 0, feels_like: 0.00))
     
     // MARK: - Functions
     
     func fetchData() {
         Task {
             do {
-                self.weatherfeatures = try await fetchFeatures()
+                self.weatherfeatures = try await WeatherRepository.fetchWeather()
                 
                 
             } catch {
                 print("Request Failed with error: \(error)")
             }
         }
-    }
-    
-    private func fetchFeatures() async throws -> [Current] {
-        
-        guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190") else {
-            throw HTTPError.invalidURL
-        }
-        
-        let (data, _) = try await URLSession.shared.data(from: url)
-        
-        let result = try JSONDecoder().decode(LocationFeatures.self, from: data)
-        return result.current
     }
     
 }

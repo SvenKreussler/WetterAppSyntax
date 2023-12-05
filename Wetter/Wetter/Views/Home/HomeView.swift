@@ -11,6 +11,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
+            
         
             TabView {
                 
@@ -35,6 +36,8 @@ struct HomeView: View {
                 }
                 
             }
+        Text("\(locationCurrent.weatherfeatures.current.temp)")
+        Text("\(locationCurrent.weatherfeatures.current.dt)")
             
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
@@ -43,7 +46,7 @@ struct HomeView: View {
         
     }
     // MARK: - Variables
-    
+    @StateObject private var locationCurrent = LocationFeaturesViewModel()
     
 }
 
