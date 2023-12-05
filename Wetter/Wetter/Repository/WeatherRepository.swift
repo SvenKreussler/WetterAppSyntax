@@ -11,15 +11,30 @@ class WeatherRepository {
     
     private static var weatherAPIKey = "29ab9d965c5e4da691c9d5979ff10190"
     
-    private static var locationList = ""
-    
-    static func fetchWeather() async throws -> LocationFeatures {
+    static func fetchWeather(for locations: [LocationList]) async throws -> [LocationFeatures] {
         
-        guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190") else {
-            throw HTTPError.invalidURL
+        var allWeatherData: [LocationFeatures] = []
+        
+        for location in locations {
+            let urlString = "https://api.openweathermap.org/data/3.0/onecall?"
+            
+            // Prepare the location as a query string
+            let locationQuery = "lat=\(location.lat.description.replacingOccurrences(of: ".", with: ",")),lon=\(location.lon.description.replacingOccurrences(of: ".", with: ","))"
+            
+            // Prepare the complete API URL
+            let apiUrlString = "\(urlString)\(locationQuery)&units=metric&exclude=minutely,hourly,daily&lang=de&appid=\(weatherAPIKey)"
+            
+            guard let url = URL(string: apiUrlString) else {
+                throw HTTPError.invalidURL
+            }
+            
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let weatherData = try JSONDecoder().decode(LocationFeatures.self, from: data)
+            allWeatherData.append(weatherData)
         }
-        let (data, _) =  try await URLSession.shared.data(from: url)
-        
-        return try JSONDecoder().decode(LocationFeatures.self, from: data)
+        return allWeatherData
     }
 }
+//https://api.openweathermap.org/data/3.0/onecall?lat=48.13,lon=11.57&units=metric&exclude=minutely,hourly,daily&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
+
+//https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely,hourly,daily&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190

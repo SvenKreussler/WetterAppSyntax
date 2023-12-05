@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct LocationFeatures: Codable {
+struct LocationFeatures: Codable, Identifiable {
     
     //let results: Response
-    //var id = UUID()
+    var id = UUID()
     let current: Current
 
 }

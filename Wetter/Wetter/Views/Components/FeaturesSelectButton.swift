@@ -13,7 +13,7 @@ struct FeaturesSelectButton: View {
         HStack(spacing: 120) {
             // Zusammenfassung des Wochentages als icon und Text
             VStack {
-                Text(LocationItem.berlin.title)
+                Text(LocationItemEnum.berlin.title)
                     .font(.largeTitle)
                 Image(systemName: WochenvohersageItem.heute.icon)
                     .font(.largeTitle)
