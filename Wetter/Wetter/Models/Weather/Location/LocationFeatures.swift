@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct LocationFeatures: Codable, Identifiable {
+struct LocationFeatures: Codable {
     
     //let results: Response
-    var id = UUID()
+    // var id = UUID()
+    let lat: Float
     let current: Current
 
 }
@@ -28,29 +29,29 @@ struct Current: Codable {
     
     
     let dt: Int
-    let temp: Double
-    let feels_like: Double
+    let temp: Float
+    let feels_like: Float
     
 }
 
 struct Hourly: Codable {
     
     let dt: Int
-    let temp: Double
+    let temp: Float
     
 }
 
 struct Daily: Codable {
     let dt: Int
     let temp: Temp
-    let uvi: Double
+    let uvi: Float
 }
 
 struct Temp: Codable {
     // Avarage of Day
-    let day: Double
-    let min: Double
-    let max: Double
+    let day: Float
+    let min: Float
+    let max: Float
     
 }
 

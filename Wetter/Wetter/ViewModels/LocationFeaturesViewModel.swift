@@ -9,9 +9,11 @@ import Foundation
 
 @MainActor
 
-class LocationFeaturesViewModel: ObservableObject {
+class LocationFeaturesViewModel: ObservableObject, Identifiable {
+    
     
     /// Berlin,München, Hamburg
+    
     
     private static var locationList =
         [LocationList(lat: 52.5170365, lon: 13.3888599),

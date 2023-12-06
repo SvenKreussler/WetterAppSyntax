@@ -15,9 +15,9 @@ struct HomeView: View {
         
         TabView {
             
-            ForEach(locationCurrent.weatherfeatures, id: \.id) { item in
-                Text("\(item.current.dt)")
-            }
+//            ForEach(locationCurrent.weatherfeatures, id: \.id) { item in
+//                Text("\(item.current.dt)")
+//            }
             
             
             ForEach(LocationItemEnum.allCases, id: \.self) { item in
@@ -44,11 +44,27 @@ struct HomeView: View {
         }
         
         
-        Text("\(locationCurrent.weatherfeatures.description)")
-//        Text("\(locationCurrent.weatherfeatures.current.dt)")
+        VStack {
+            Text("Weather Features:")
             
-            .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            List(locationCurrent.weatherfeatures, id: \.lat ) {
+                weatherFeature in
+                VStack(alignment: .leading) {
+                    
+                    Text("Temperature: \(Int(round(weatherFeature.current.temp)))")
+                    Text("Feels Like: \(Int(round(weatherFeature.current.feels_like)))")
+                }
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+                .padding(.vertical, 5)
+            }
+            .onAppear {
+                locationCurrent.fetchData()
+                
+            }
+            
+        }
         
             
         

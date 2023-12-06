@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LocationItems: Identifiable {
+struct LocationItems {
     var id = UUID()
     var locationList: [LocationFeatures]
 }
