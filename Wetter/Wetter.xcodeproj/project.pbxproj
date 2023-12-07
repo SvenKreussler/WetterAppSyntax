@@ -43,6 +43,7 @@
 		0EE280D62B1F246B0093C6D9 /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE280D52B1F246B0093C6D9 /* WeatherRepository.swift */; };
 		0EE280D82B1F2DEA0093C6D9 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE280D72B1F2DEA0093C6D9 /* LocationList.swift */; };
 		0EE280DA2B1F583E0093C6D9 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE280D92B1F583E0093C6D9 /* LocationItem.swift */; };
+		0EE280DD2B20B26A0093C6D9 /* ReverseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE280DC2B20B26A0093C6D9 /* ReverseLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		0EE280D52B1F246B0093C6D9 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		0EE280D72B1F2DEA0093C6D9 /* LocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 		0EE280D92B1F583E0093C6D9 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
+		0EE280DC2B20B26A0093C6D9 /* ReverseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 		0EBA63482B177F340001F895 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0EE280DB2B20B24E0093C6D9 /* Location */,
 				0EBA63492B177F3A0001F895 /* Colors */,
 			);
 			path = Utils;
@@ -323,6 +326,14 @@
 				0EE280D52B1F246B0093C6D9 /* WeatherRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		0EE280DB2B20B24E0093C6D9 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0EE280DC2B20B26A0093C6D9 /* ReverseLocation.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +449,7 @@
 				0EBA63472B1773640001F895 /* HTTPError.swift in Sources */,
 				0EBA633D2B16212C0001F895 /* LocationSearch.swift in Sources */,
 				0E65AEB12B0F551000331457 /* DefaultBackground.swift in Sources */,
+				0EE280DD2B20B26A0093C6D9 /* ReverseLocation.swift in Sources */,
 				0ED21BF02B0B878F002EC3B0 /* ContentView.swift in Sources */,
 				0E79A60B2B0F8ED700F5528F /* CustomColors.swift in Sources */,
 				0E7758FC2B0CAB1E0069AF61 /* SearchView.swift in Sources */,

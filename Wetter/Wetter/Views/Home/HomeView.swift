@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 
 
@@ -14,61 +15,29 @@ struct HomeView: View {
         
         
         TabView {
-            
-//            ForEach(locationCurrent.weatherfeatures, id: \.id) { item in
-//                Text("\(item.current.dt)")
-//            }
-            
-            
-            ForEach(LocationItemEnum.allCases, id: \.self) { item in
+            ForEach(locationCurrent.weatherfeatures, id: \.lat ) { weatherFeature in
                 VStack(spacing: 48) {
                     
-                    Text(item.title)
-                        .font(.largeTitle)
-                        .bold()
-                    Image(systemName: item.icon)
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
-                        .font(.system(size: 96))
-                    
-                    
+                    HStack {
+                        Text("Temperature: \(Int(round(weatherFeature.current.temp))) °C")
+                        Text("Feels Like: \(Int(round(weatherFeature.current.feels_like))) °C")
+                    }
+
                     CardViewVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
+                        .environmentObject(locationCurrent)
                     
                     CardViewWochenVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 300)
+                        .environmentObject(locationCurrent)
                 }
             }
             
         }
-        
-        
-        VStack {
-            Text("Weather Features:")
-            
-            List(locationCurrent.weatherfeatures, id: \.lat ) {
-                weatherFeature in
-                VStack(alignment: .leading) {
-                    
-                    Text("Temperature: \(Int(round(weatherFeature.current.temp)))")
-                    Text("Feels Like: \(Int(round(weatherFeature.current.feels_like)))")
-                }
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
-                .padding(.vertical, 5)
-            }
-            .onAppear {
-                locationCurrent.fetchData()
-                
-            }
-            
-        }
-        
-            
-        
-        
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
     // MARK: - Variables
     @StateObject private var locationCurrent = LocationFeaturesViewModel()

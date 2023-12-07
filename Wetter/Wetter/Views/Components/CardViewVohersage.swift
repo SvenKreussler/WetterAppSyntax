@@ -13,42 +13,55 @@ struct CardViewVohersage: View {
     
     
     var body: some View {
+        Text("test")
         
-        VStack(alignment: .leading) {
-            Text("Aktuelle Zeitansage")
-                .frame(alignment: .leading)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                
-                Divider()
-                    .frame(height: 0.5)
-                    .overlay(.black)
-                
-                HStack(spacing: 24) { ForEach(TagesvohersageItem.allCases, id: \.rawValue) { item in VStack {
-                    Text(item.title)
-                    Text(item.degree)
-                    Image(systemName: item.icon)
-                        .scaledToFit()
-                }
-                }
-                    
-                }
-                
-                
-                
-            }
-            
-            
-            
-        }
+//        VStack(alignment: .leading) {
+//            Text("Aktuelle Zeitansage")
+//                .frame(alignment: .leading)
+//            
+//            ScrollView(.horizontal, showsIndicators: false) {
+//                
+//                Divider()
+//                    .frame(height: 0.5)
+//                    .overlay(.black)
+//                
+//                HStack(spacing: 24) { 
+//                    List {
+//                        ForEach(locationCurrent.hourlyData, id: \.dt) { hourly in
+//                                        
+//                            Text(String(hourly.temp))
+//                                }
+//                        }
+//                }
+//                
+//            }
+//        }
         
         // MARK: - Variables
         
-        //    @StateObject private var locationFeaturesViewModel = LocationFeaturesViewModel()
+        @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
     }
 }
-    
-    #Preview {
-        CardViewVohersage()
-    }
+
+//struct HourlyRow: View {
+//    var hourly: Hourly
+//
+//    var body: some View {
+//        HStack {
+//            Text("Time: \(formattedTime(from: TimeInterval(hourly.dt))), Temp: \(hourly.temp)")
+//            // Add other hourly row content as needed
+//        }
+//    }
+//
+//    private func formattedTime(from timestamp: TimeInterval) -> String {
+//        let date = Date(timeIntervalSince1970: timestamp)
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "HH:mm"
+//        return formatter.string(from: date)
+//    }
+//}
+
+#Preview {
+    CardViewVohersage()
+}
 

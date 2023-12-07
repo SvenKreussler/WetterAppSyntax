@@ -9,28 +9,18 @@ import Foundation
 
 struct LocationFeatures: Codable {
     
-    //let results: Response
-    // var id = UUID()
     let lat: Float
+    let lon: Float
     let current: Current
+    let hourly: [Hourly]
 
 }
-
-//struct Response: Codable, Identifiable {
-//    
-//    var id = UUID()
-//    
-//    let hourly: [Hourly]
-//    let daily: [Daily]
-//    let alerts: Alerts
-//}
-
 struct Current: Codable {
-    
     
     let dt: Int
     let temp: Float
     let feels_like: Float
+    
     
 }
 
