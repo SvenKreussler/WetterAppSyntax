@@ -15,16 +15,16 @@ struct CardViewVohersage: View {
     var body: some View {
         Text("test")
         
-//        VStack(alignment: .leading) {
-//            Text("Aktuelle Zeitansage")
-//                .frame(alignment: .leading)
-//            
-//            ScrollView(.horizontal, showsIndicators: false) {
-//                
-//                Divider()
-//                    .frame(height: 0.5)
-//                    .overlay(.black)
-//                
+        VStack(alignment: .leading) {
+            Text("Aktuelle Zeitansage")
+                .frame(alignment: .leading)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                Divider()
+                    .frame(height: 0.5)
+                    .overlay(.black)
+                
 //                HStack(spacing: 24) { 
 //                    List {
 //                        ForEach(locationCurrent.hourlyData, id: \.dt) { hourly in
@@ -33,9 +33,9 @@ struct CardViewVohersage: View {
 //                                }
 //                        }
 //                }
-//                
-//            }
-//        }
+                
+            }
+        }
         
         // MARK: - Variables
         

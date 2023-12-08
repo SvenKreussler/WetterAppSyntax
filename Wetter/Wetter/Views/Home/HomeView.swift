@@ -21,6 +21,7 @@ struct HomeView: View {
                     HStack {
                         Text("Temperature: \(Int(round(weatherFeature.current.temp))) °C")
                         Text("Feels Like: \(Int(round(weatherFeature.current.feels_like))) °C")
+                        
                     }
 
                     CardViewVohersage()
@@ -36,6 +37,7 @@ struct HomeView: View {
             }
             
         }
+        
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
