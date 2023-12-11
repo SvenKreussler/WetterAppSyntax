@@ -34,7 +34,7 @@ class LocationSearchViewModel: ObservableObject {
     
     private func fetchLocation() async throws -> [LocationSearch] {
         
-        guard let url = URL(string:"http://api.openweathermap.org/geo/1.0/direct?q=Berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190") else {
+        guard let url = URL(string: "https://api.openweathermap.org/geo/1.0/direct?q=Berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190") else {
             throw HTTPError.invalidURL
         }
         

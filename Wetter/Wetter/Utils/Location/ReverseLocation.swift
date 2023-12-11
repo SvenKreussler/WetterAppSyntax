@@ -26,4 +26,3 @@ func reverseGeocodeLocation(latitude: CLLocationDegrees, longitude: CLLocationDe
         }
     }
 }
-

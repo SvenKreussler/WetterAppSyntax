@@ -13,7 +13,6 @@ struct CardViewVohersage: View {
     
     
     var body: some View {
-        Text("test")
         
         VStack(alignment: .leading) {
             Text("Aktuelle Zeitansage")
@@ -24,10 +23,26 @@ struct CardViewVohersage: View {
                 Divider()
                     .frame(height: 0.5)
                     .overlay(.black)
+                HStack(spacing: 24) {
+                    
+                    
+                    
+//                    if let locationCurrent = locationCurrent {
+//                        List(locationCurrent.weatherfeatures, id: \.lat) {
+//                            item in
+//                            Text(String("\(item.hourly.first)"))
+//                        }
+//                    }
+                    
+                    ForEach(locationCurrent.weatherfeatures , id: \.lat) {
+                            item in
+                            Text(String("\(item.hourly.first)"))
+                        }
+                }
                 
 //                HStack(spacing: 24) { 
 //                    List {
-//                        ForEach(locationCurrent.hourlyData, id: \.dt) { hourly in
+//                        ForEach(locationCurrent.weatherfeatures, id: \.dt) { hourly in
 //                                        
 //                            Text(String(hourly.temp))
 //                                }
@@ -40,6 +55,7 @@ struct CardViewVohersage: View {
         // MARK: - Variables
         
         @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
+        
     }
 }
 

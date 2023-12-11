@@ -8,19 +8,21 @@
 import SwiftUI
 import CoreLocation
 
-
-
 struct HomeView: View {
     var body: some View {
         
         
         TabView {
-            ForEach(locationCurrent.weatherfeatures, id: \.lat ) { weatherFeature in
+            
+            List(locationCurrent.weatherfeatures, id: \.lat ) { item in
                 VStack(spacing: 48) {
                     
+                    
                     HStack {
-                        Text("Temperature: \(Int(round(weatherFeature.current.temp))) °C")
-                        Text("Feels Like: \(Int(round(weatherFeature.current.feels_like))) °C")
+//                        Text("Temperature: \(Int(round(item.current.temp))) °C")
+//                        Text("Feels Like: \(Int(round(item.feels_like))) °C")
+                        Text("Test: \(item.current.temp)")
+                        Text("Feels Like: \(item.current.feels_like)")
                         
                     }
 
@@ -38,13 +40,14 @@ struct HomeView: View {
             
         }
         
+        
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
+    
     // MARK: - Variables
-    @StateObject private var locationCurrent = LocationFeaturesViewModel()
-    
-    
+    @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
+
 }
 
 
