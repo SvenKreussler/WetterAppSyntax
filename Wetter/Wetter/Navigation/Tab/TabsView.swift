@@ -12,7 +12,8 @@ struct TabsView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             
-            HomeView()
+            
+            HomeView(locationCurrent: locationCurrent)
                 .tabItem {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
@@ -37,7 +38,7 @@ struct TabsView: View {
     // MARK: - Variables
     
     @State private var selectedTab: TabItem = .home
-    @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
+    @StateObject private var locationCurrent = LocationFeaturesViewModel()
 }
 
 #Preview {

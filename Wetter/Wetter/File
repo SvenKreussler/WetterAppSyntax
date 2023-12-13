@@ -33,3 +33,10 @@ https://developer.apple.com/documentation/corelocation/converting_between_coordi
 Den Tag in ein Donut Chart anzeigen als Verhältnis von Sonnenschein, Regen und Wolken.
 Code Beispiel: VisualizingYourAppsData/Charts/StylesDetails.swift
 
+
+
+1) HomeView() braucht LocationFeatures.Current.temp & LocationFeatures.Current.feels_like  
+2) CardViewVohersage() braucht LocationFeatures.Hourly.dt & LocationFeatures.Hourly.temp
+3) CardViewWochenVohersage() braucht LocationFeatures.Daily.dt & LocationFeatures.Daily.temp & LocationFeatures.Daily.uvi
+
+

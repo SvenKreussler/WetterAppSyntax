@@ -6,21 +6,18 @@
 //
 
 import SwiftUI
-import CoreLocation
+
 
 struct HomeView: View {
     var body: some View {
         
-        
         TabView {
             
-            List(locationCurrent.weatherfeatures, id: \.lat ) { item in
+            ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
                 VStack(spacing: 48) {
-                    
-                    
+ 
                     HStack {
-//                        Text("Temperature: \(Int(round(item.current.temp))) °C")
-//                        Text("Feels Like: \(Int(round(item.feels_like))) °C")
+
                         Text("Test: \(item.current.temp)")
                         Text("Feels Like: \(item.current.feels_like)")
                         
@@ -29,12 +26,12 @@ struct HomeView: View {
                     CardViewVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
-                        .environmentObject(locationCurrent)
+                        
                     
                     CardViewWochenVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 300)
-                        .environmentObject(locationCurrent)
+                        
                 }
             }
             
@@ -46,12 +43,12 @@ struct HomeView: View {
     }
     
     // MARK: - Variables
-    @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
+    @ObservedObject var locationCurrent: LocationFeaturesViewModel
 
 }
 
 
 
 #Preview {
-    HomeView()
+    HomeView(locationCurrent: LocationFeaturesViewModel())
 }
