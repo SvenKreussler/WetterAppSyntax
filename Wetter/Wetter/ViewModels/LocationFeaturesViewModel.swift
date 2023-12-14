@@ -22,7 +22,7 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
      LocationList(lat: 48.1371079, lon: 11.5753822),
      LocationList(lat: 53.550341, lon: 10.000654)]
     
-    //MARK: - Variables
+    // MARK: - Variables
     
     
     
@@ -48,13 +48,7 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
                 
                 self.weatherfeatures = try await WeatherRepository.fetchWeather(for:LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
                 
-                
-                
-//                let hourlyData = try await WeatherRepository.fetchWeather(for: LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
-//                let locationFeatures = try await WeatherRepository.fetchWeather(for: LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
-                
-                 //print(weatherfeatures)
-                
+
                 
             } catch {
                 print("Request Failed with error: \(error)")
