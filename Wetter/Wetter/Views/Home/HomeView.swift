@@ -18,19 +18,23 @@ struct HomeView: View {
  
                     HStack {
 
-                        Text("Test: \(item.current.temp)")
-                        Text("Feels Like: \(item.current.feels_like)")
+                        Text("Temperature: \(Int(round(item.current.temp))) °C")
+                        Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
                         
                     }
-
+                    
                     CardViewVohersage()
+                        .environmentObject(locationCurrent)
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
                         
+                        
                     
                     CardViewWochenVohersage()
+                        .environmentObject(locationCurrent)
                         .cardViewStyling()
                         .frame(width: 350, height: 300)
+                        
                         
                 }
             }
@@ -43,12 +47,14 @@ struct HomeView: View {
     }
     
     // MARK: - Variables
-    @ObservedObject var locationCurrent: LocationFeaturesViewModel
+    @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
+    
 
 }
 
 
 
 #Preview {
-    HomeView(locationCurrent: LocationFeaturesViewModel())
+    HomeView()
+        .environmentObject(LocationFeaturesViewModel())
 }

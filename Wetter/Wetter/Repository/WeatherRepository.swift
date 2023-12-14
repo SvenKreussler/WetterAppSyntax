@@ -25,7 +25,7 @@ class WeatherRepository {
             // Prepare the complete API URL
             let apiUrlString = "\(urlString)\(locationQuery)&units=metric&exclude=minutely&lang=de&appid=\(weatherAPIKey)"
             
-            // https://api.openweathermap.org/data/3.0/onecall?lat=48.13&lon=11.57&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
+            //https://api.openweathermap.org/data/3.0/onecall?lat=48.13&lon=11.57&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
             
             guard let url = URL(string: apiUrlString) else {
                 throw HTTPError.invalidURL

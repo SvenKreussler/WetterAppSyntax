@@ -34,7 +34,7 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     // MARK: - Variables
     
-    @Published var weatherfeatures: [LocationFeatures] = [ LocationFeatures(lat: 0.0, lon: 0.0, current: LocationFeatures.Current(dt: 0, temp: 0.0, feels_like: 0.0), hourly:[LocationFeatures.Hourly(dt: 0, temp: 0.0)])
+    @Published var weatherfeatures: [LocationFeatures] = [ LocationFeatures(lat: 0.0, lon: 0.0, current: LocationFeatures.Current(dt: 0, temp: 0.0, feels_like: 0.0), hourly: [LocationFeatures.Hourly(dt: 0, temp: 0.0)])
     ]
     
     
