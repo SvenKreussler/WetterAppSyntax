@@ -13,14 +13,14 @@ import CoreLocation
 class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     
-    /// Berlin,München, Hamburg
+    /// Berlin,München, Kario
     
     
     private static var locationList =
-    
-    [LocationList(lat: 52.5170365, lon: 13.3888599),
-     LocationList(lat: 48.1371079, lon: 11.5753822),
-     LocationList(lat: 53.550341, lon: 10.000654)]
+    ///Berlin, helsinki, kairo
+    [LocationList(name:"Berlin", lat: 52.5170365, lon: 13.3888599),
+     LocationList(name: "Helisnki", lat: 60.1674881, lon: 24.9427473),
+     LocationList(name: "Kairo", lat: 6.1327342, lon: 6.1327342)]
     
     // MARK: - Variables
     
@@ -32,9 +32,10 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     
     
+    
     // MARK: - Variables
     
-    @Published var weatherfeatures: [LocationFeatures] = [ LocationFeatures(lat: 0.0, lon: 0.0, current: LocationFeatures.Current(dt: 0, temp: 0.0, feels_like: 0.0), hourly: [LocationFeatures.Hourly(dt: 0, temp: 0.0)])
+    @Published var weatherfeatures: [LocationFeatures] = [ LocationFeatures(lat: 0.0, lon: 0.0, current: LocationFeatures.Current(dt: 0, temp: 0.0, feels_like: 0.0), hourly: [LocationFeatures.Hourly(dt: 0, temp: 0.0)], daily: [LocationFeatures.Daily(dt: 0, temp: LocationFeatures.Temp.init(day: 0.00, min: 0.00, max: 0.00), uvi: 0.00)])
     ]
     
     
@@ -46,7 +47,7 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
         Task {
             do {
                 
-                self.weatherfeatures = try await WeatherRepository.fetchWeather(for:LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
+                self.weatherfeatures = try await WeatherRepository.fetchWeather(for: LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
                 
 
                 

@@ -34,9 +34,7 @@ struct WeatherFeaturesViewSheet: View {
         }
         
         Divider()
-            
-        
-        
+
         FeaturesSelectButton()
         
         WeatherFeaturesChart()

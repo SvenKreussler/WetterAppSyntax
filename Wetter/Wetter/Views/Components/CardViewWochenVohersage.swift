@@ -13,22 +13,22 @@ struct CardViewWochenVohersage: View {
         VStack(alignment: .leading) {
             Text("Vohersage für 7 Tage")
                 .frame(width: 200, height: 20, alignment: .leading)
+                
             ZStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(WochenvohersageItem.allCases, id: \.rawValue) { item in
-                        Divider()
-                        HStack {
-                            Text(item.title.prefix(2))
-                                .frame(width: 60, height: 20)
-                            
-                            Text(item.degrees)
-                                .frame(width: 25, height: 20)
+                    ForEach(locationCurrent.weatherfeatures, id: \.lat) { item in
+                        ForEach(item.daily, id: \.dt) { item in
+                            Divider()
+                            HStack {
+                                Text("\(formattedTimeWeekDay(for: item.dt))")
+                                    .frame(width: 60, height: 20)
                                 
-                            Image(systemName: item.icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                            Spacer()
+                                Text("\(Int(round(item.temp.day))) °C")
+                                    .frame(width: 50, height: 20)
+                                
+
+                                Spacer()
+                            }
                         }
                         
                     }.contentShape(Rectangle())
@@ -50,15 +50,14 @@ struct CardViewWochenVohersage: View {
                 }
             }
         }
-        
-        
     }
-    
     @State var shouldShowEditTask = false
+    @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
 }
 
 
 
 #Preview {
     CardViewWochenVohersage()
+        .environmentObject(LocationFeaturesViewModel())
 }

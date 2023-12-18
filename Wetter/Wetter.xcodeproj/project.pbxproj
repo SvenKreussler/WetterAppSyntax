@@ -11,6 +11,10 @@
 		0E0B2BAB2B14D04700DDB408 /* WeatherFeatureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B2BAA2B14D04700DDB408 /* WeatherFeatureItem.swift */; };
 		0E0B2BAD2B14D49000DDB408 /* FeaturesSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B2BAC2B14D49000DDB408 /* FeaturesSelectButton.swift */; };
 		0E1CBC082B0F5DBB0099E7D2 /* CardViewStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1CBC072B0F5DBB0099E7D2 /* CardViewStyling.swift */; };
+		0E351E8B2B303BA400B25629 /* Wetter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E892B303BA400B25629 /* Wetter.xcdatamodeld */; };
+		0E351E8D2B303BC200B25629 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8C2B303BC200B25629 /* PersistentStore.swift */; };
+		0E351E8F2B3052E300B25629 /* geocodeAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8E2B3052E300B25629 /* geocodeAdress.swift */; };
+		0E5D52B92B2B298C0065E9AD /* FormattedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D52B82B2B298C0065E9AD /* FormattedTime.swift */; };
 		0E65AEAC2B0E264200331457 /* WochenvohersageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65AEAB2B0E264200331457 /* WochenvohersageItem.swift */; };
 		0E65AEAE2B0E299100331457 /* CardViewWochenVohersage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65AEAD2B0E299100331457 /* CardViewWochenVohersage.swift */; };
 		0E65AEB12B0F551000331457 /* DefaultBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65AEB02B0F551000331457 /* DefaultBackground.swift */; };
@@ -49,6 +53,10 @@
 		0E0B2BAA2B14D04700DDB408 /* WeatherFeatureItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFeatureItem.swift; sourceTree = "<group>"; };
 		0E0B2BAC2B14D49000DDB408 /* FeaturesSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesSelectButton.swift; sourceTree = "<group>"; };
 		0E1CBC072B0F5DBB0099E7D2 /* CardViewStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewStyling.swift; sourceTree = "<group>"; };
+		0E351E8A2B303BA400B25629 /* Wetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wetter.xcdatamodel; sourceTree = "<group>"; };
+		0E351E8C2B303BC200B25629 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		0E351E8E2B3052E300B25629 /* geocodeAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geocodeAdress.swift; sourceTree = "<group>"; };
+		0E5D52B82B2B298C0065E9AD /* FormattedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedTime.swift; sourceTree = "<group>"; };
 		0E65AEAB2B0E264200331457 /* WochenvohersageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WochenvohersageItem.swift; sourceTree = "<group>"; };
 		0E65AEAD2B0E299100331457 /* CardViewWochenVohersage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewWochenVohersage.swift; sourceTree = "<group>"; };
 		0E65AEB02B0F551000331457 /* DefaultBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBackground.swift; sourceTree = "<group>"; };
@@ -95,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E351E872B303B1800B25629 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0E351E892B303BA400B25629 /* Wetter.xcdatamodeld */,
+				0E351E8C2B303BC200B25629 /* PersistentStore.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		0E65AEAF2B0F549400331457 /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +147,7 @@
 				0E7759032B0CD68A0069AF61 /* CardViewVohersage.swift */,
 				0E65AEAD2B0E299100331457 /* CardViewWochenVohersage.swift */,
 				0E0B2BAC2B14D49000DDB408 /* FeaturesSelectButton.swift */,
+				0E5D52B82B2B298C0065E9AD /* FormattedTime.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -282,9 +300,10 @@
 		0ED21BEC2B0B878F002EC3B0 /* Wetter */ = {
 			isa = PBXGroup;
 			children = (
+				0E351E872B303B1800B25629 /* CoreData */,
+				0E7758DF2B0B91610069AF61 /* File */,
 				0EE280D42B1F244B0093C6D9 /* Repository */,
 				0E7758F42B0B9F6D0069AF61 /* Models */,
-				0E7758DF2B0B91610069AF61 /* File */,
 				0EBA63482B177F340001F895 /* Utils */,
 				0EBA63422B176F610001F895 /* ViewModels */,
 				0E7758DE2B0B904F0069AF61 /* Views */,
@@ -318,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				0EE280DC2B20B26A0093C6D9 /* ReverseLocation.swift */,
+				0E351E8E2B3052E300B25629 /* geocodeAdress.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -420,6 +440,7 @@
 				0E7758FA2B0CAAF10069AF61 /* MapView.swift in Sources */,
 				0E1CBC082B0F5DBB0099E7D2 /* CardViewStyling.swift in Sources */,
 				0EBB084A2B1DD01C00DB2D83 /* LocationFeaturesViewModel.swift in Sources */,
+				0E5D52B92B2B298C0065E9AD /* FormattedTime.swift in Sources */,
 				0E6967C02B10E4A000FA1943 /* WeatherFeaturesChart.swift in Sources */,
 				0EBA63442B17713D0001F895 /* LocationSearchViewModel.swift in Sources */,
 				0E7759042B0CD68A0069AF61 /* CardViewVohersage.swift in Sources */,
@@ -434,9 +455,11 @@
 				0E65AEAE2B0E299100331457 /* CardViewWochenVohersage.swift in Sources */,
 				0EBA63472B1773640001F895 /* HTTPError.swift in Sources */,
 				0EBA633D2B16212C0001F895 /* LocationSearch.swift in Sources */,
+				0E351E8D2B303BC200B25629 /* PersistentStore.swift in Sources */,
 				0E65AEB12B0F551000331457 /* DefaultBackground.swift in Sources */,
 				0EE280DD2B20B26A0093C6D9 /* ReverseLocation.swift in Sources */,
 				0E79A60B2B0F8ED700F5528F /* CustomColors.swift in Sources */,
+				0E351E8F2B3052E300B25629 /* geocodeAdress.swift in Sources */,
 				0E7758FC2B0CAB1E0069AF61 /* SearchView.swift in Sources */,
 				0EE280DA2B1F583E0093C6D9 /* LocationItem.swift in Sources */,
 				0EBA63412B1765CD0001F895 /* LocationSearchByAddress.swift in Sources */,
@@ -448,6 +471,7 @@
 				0ED21BEE2B0B878F002EC3B0 /* WetterApp.swift in Sources */,
 				0E6967BE2B10AE3700FA1943 /* WeatherFeaturesViewSheet.swift in Sources */,
 				0E65AEAC2B0E264200331457 /* WochenvohersageItem.swift in Sources */,
+				0E351E8B2B303BA400B25629 /* Wetter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +614,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,7 +648,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +687,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E351E892B303BA400B25629 /* Wetter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E351E8A2B303BA400B25629 /* Wetter.xcdatamodel */,
+			);
+			currentVersion = 0E351E8A2B303BA400B25629 /* Wetter.xcdatamodel */;
+			path = Wetter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0ED21BE22B0B878F002EC3B0 /* Project object */;
 }

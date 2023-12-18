@@ -40,10 +40,29 @@ class WeatherRepository {
             let weatherData = try JSONDecoder().decode(T.self, from: data)
             allWeatherData.append(weatherData)
             
+            // print(jsonString)
+            
             
         }
         return allWeatherData
     }
+    
+    static func fetchLocationData(for city: String) async throws -> [LocationList] {
+            let urlString = "https://api.openweathermap.org/geo/1.0/direct"
+            let locationQuery = "q=\(city)&limit=1&appid=\(weatherAPIKey)"
+            let apiUrlString = "\(urlString)?\(locationQuery)"
+
+            guard let url = URL(string: apiUrlString) else {
+                throw HTTPError.invalidURL
+            }
+
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let jsonString = String(data: data, encoding: .utf8)
+            print("Received JSON: \(jsonString ?? "Unable to convert to string")")
+
+            let locationData = try JSONDecoder().decode([LocationList].self, from: data)
+            return locationData
+        }
     
     
 }

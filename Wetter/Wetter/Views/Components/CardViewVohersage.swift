@@ -24,11 +24,12 @@ struct CardViewVohersage: View {
                     .overlay(.black)
                 HStack(spacing: 24) {
                     ForEach(locationCurrent.weatherfeatures, id: \.lat) { item in
-                        ForEach(item.hourly, id: \.dt) { item in
+                        
+                        ForEach(item.hourly, id: \.dt) { hourly in
                             VStack {
-                                Text("\(formattedTime(for: item.dt))")
-                                // ForEach weil let hourly: [Hourly] array
-                                Text("\(Int(round(item.temp))) °C")
+                                Text("\(formattedTime(for: hourly.dt))")
+                                
+                                Text("\(Int(round(hourly.temp))) °C")
                             }
                             
                         }
@@ -41,12 +42,8 @@ struct CardViewVohersage: View {
    
     }
     // MARK: - Functions
-    func formattedTime(for timestamp: Int) -> String {
-            let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm" // Use "hh:mm a" for 12-hour format with AM/PM
-            return dateFormatter.string(from: date)
-    }
+    
+    
     
     // MARK: - Variables
     

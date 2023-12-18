@@ -13,6 +13,7 @@ struct LocationFeatures: Codable {
     let lon: Float
     let current: Current
     let hourly: [Hourly]
+    let daily: [Daily]
     
     
     struct Current: Codable {

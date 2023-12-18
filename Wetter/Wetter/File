@@ -15,10 +15,10 @@ Navigations und Entitäten Referenz(Core Data): Traveler
 API Referenz:
 
 Städtenamen in Breiten und Längengrad auflösen:
-http://api.openweathermap.org/geo/1.0/direct?q=Berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190
+https://api.openweathermap.org/geo/1.0/direct?q=Berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190
 
 Für die nächsten fünf Tage stündlich Wetter:
-api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
+https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190
 
 
 https://api.openweathermap.org/data/3.0/forecast/daily?lat=52,44&lon=13,40&cnt=5&appid=29ab9d965c5e4da691c9d5979ff10190

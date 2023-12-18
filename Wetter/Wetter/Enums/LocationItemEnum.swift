@@ -9,7 +9,7 @@ import Foundation
 
 
 enum LocationItemEnum: String, CaseIterable {
-    // TODO: Hier definieren ´Zeitansage´ ´Wettervorhersage´ was für Eigenschaften das Enum hat
+    
     
     
     
