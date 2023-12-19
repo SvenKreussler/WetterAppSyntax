@@ -8,6 +8,7 @@
 import Foundation
 
 struct LocationList: Codable {
+    
     var name: String
     var lat: Double
     var lon: Double

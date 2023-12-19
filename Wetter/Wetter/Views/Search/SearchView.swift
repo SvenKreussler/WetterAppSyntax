@@ -10,8 +10,12 @@ import CoreLocation
 
 struct SearchView: View {
     
+    // TODO: prüfen Sie wie ein Parameter zu dem Fetch übergeben werden kann.
+    // TODO: Prüfen Sie die gespeicherten Daten persistent gespeichert werden können
+    
     @State private var searchQuery = ""
-    @State private var coordinates: CLLocationCoordinate2D?
+    
+    @State private var locations: [LocationList] = []
     
     private let  locationsList = [LocationSearch(id: UUID(), name: "Berlin", lat: 44.00, lon: 23.00),
                                   LocationSearch(id: UUID(), name: "München", lat: 23.23, lon: 22.22),
@@ -19,61 +23,33 @@ struct SearchView: View {
     
     var body: some View {
         
-        SearchBar(text: $searchQuery)
-            .padding()
-        
-        if let coordinates = coordinates {
-            Text("Latitude: \(coordinates.latitude), Longitude: \(coordinates.longitude)")
-                .padding()
-        } else {
-            Text("Location not found")
-                .padding()
-        }
-        
-        NavigationStack {
+
+        NavigationView {
             List(locationsList) { item in
                 VStack {
-
-                    Text(item.name)
-                        .font(.system(size: 46))
+                    
+                    
                 }.padding(32)
                     .frame(width: 300, height: 100)
                     .cardViewStyling()
             }.listStyle(.plain)
-            // .searchable(text: $searchText)
-            
-            
+                .searchable(text: $searchText) {
+                    
+                }
         }
     }
     // MARK: - Functions
+    // print(locationSearchViewModel.fetchData())
     
-    func performGeocoding() {
-        geocodeAddress(searchQuery) { (coordinate, error) in
-            if let coordinate = coordinate {
-                self.coordinates = coordinate
-            } else if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
-        
-    }
     
     
     // MARK: - Variables
-    @State private var searchText: String = ""
+    @State private var searchText = ""
+    @StateObject var locationSearchViewModel = LocationSearchViewModel()
     
 }
 
-struct SearchBar: View {
-    @Binding var text: String
-    
-    var body: some View {
-        TextField("Search for a location", text: $text)
-            .padding()
-            .background(Color(.systemGray6))
-            .cornerRadius(8)
-    }
-}
+
 
 #Preview {
     SearchView()

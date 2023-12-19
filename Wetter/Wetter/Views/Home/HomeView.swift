@@ -17,8 +17,7 @@ struct HomeView: View {
                 VStack(spacing: 48) {
                     
                     HStack {
-                        
-                        
+
                         Text("Temperature: \(Int(round(item.current.temp))) °C")
                         Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
                         
@@ -27,7 +26,7 @@ struct HomeView: View {
                     CardViewVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
-                    // 1) struct als Parameter übergeben und dann anzeigen. Muss kein Beining erstellt sein.
+                    // 1) struct als Parameter übergeben und dann anzeigen. Muss kein Binding erstellt sein.
                     // 2) prüfen, ob mit Filterfunktion benötigte Daten weitergegeben werden können
                     
                     CardViewWochenVohersage()
