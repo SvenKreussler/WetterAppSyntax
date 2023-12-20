@@ -40,5 +40,18 @@ class LocationSearchViewModel: ObservableObject {
         container.context.delete(location)
         container.save()
     }
+    
+    // MARK: - Functions
+    
+    func save() {
+        let location = Location(context: container.context)
+        location.id = UUID()
+        location.city = city
+        location.lat = lat
+        location.lon = lon
+        
+        container.save()
+        
+    }
 }
 

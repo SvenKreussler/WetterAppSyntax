@@ -28,7 +28,7 @@ struct TabsView: View {
                 }
                 .tag(TabItem.maps)
             
-            SearchView()
+            LocationSearchView()
                 .tabItem {
                     Label(TabItem.search.title, systemImage: TabItem.search.icon)
                 }

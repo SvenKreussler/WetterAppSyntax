@@ -21,7 +21,7 @@ class LocationSearchListViewModel: Observable {
     
     private let container = PersistentStore.shared
     
-    @Published var LocationViewModels: [LocationViewModel] = []
+    @Published var locationViewModels: [LocationViewModel] = []
     
     
     // MARK: - Functions
@@ -37,7 +37,7 @@ class LocationSearchListViewModel: Observable {
         
         do {
             let locations = try container.context.fetch(request)
-            self.LocationViewModels = locations.map { LocationViewModel(location: $0) }
+            self.locationViewModels = locations.map { LocationViewModel(location: $0) }
         } catch {
             print("error fetching: \(error)")
         }
