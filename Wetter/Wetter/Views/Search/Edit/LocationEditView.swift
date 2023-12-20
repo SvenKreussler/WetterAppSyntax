@@ -11,9 +11,15 @@ struct LocationEditView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                TextField("Location", text: $LocationDetailViewModel.city)
-                
+            Section("Ort") {
+                VStack {
+                    TextField("Location", text: $locationDetailViewModel.city)
+                    
+                }
+                Button(action: save) {
+                    Text("Speichern")
+                }
+                .disabled(locationDetailViewModel.disableSaving)
             }
             .navigationTitle("Location")
             .navigationBarTitleDisplayMode(.inline)
@@ -29,12 +35,17 @@ struct LocationEditView: View {
     
     
     @Binding var isPresented: Bool
-    @StateObject private var locationDetailViewModel = LocationDetailViewModel()
+    @StateObject private var locationDetailViewModel = LocationSearchDetailViewModel()
     
     // MARK: - Functions
     
     private func dismissView() {
         isPresented.toggle()
+    }
+    
+    private func save() {
+        locationDetailViewModel.save()
+        dismissView()
     }
 }
 
