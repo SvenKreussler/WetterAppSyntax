@@ -12,9 +12,11 @@ struct LocationEditView: View {
     var body: some View {
         NavigationStack {
             Section("Ort") {
-                VStack {
-                    TextField("Location", text: $locationDetailViewModel.city)
-                    
+                Form {
+                    VStack {
+                        TextField("Location", text: $locationDetailViewModel.city)
+                        
+                    }
                 }
                 Button(action: save) {
                     Text("Speichern")

@@ -10,49 +10,55 @@ import CoreLocation
 
 struct LocationSearchListView: View {
     
-       
+    
     var body: some View {
         NavigationStack {
-            Group {
-                if locationSearchListViewModel.locationSearchViewModels.isEmpty {
-                    PlaceHolderView(icon: "globe", title: "Suche einen Ort aus!")
-                } else {
-                    ScrollView(showsIndicators: false) {
-                        VStack {
-                            ForEach(locationSearchListViewModel.locationSearchViewModels, id: \.id) {
-                                viewModel in
-                                Text(viewModel.city)
-                            }
-                        }
-                    }
-                }
-            }.navigationTitle("Location")
+//            Group {
+//                if locationSearchListViewModel.locationViewModels.isEmpty {
+//                    
+//                    //PlaceHolderView(icon: "Globe", title: "Endecke die Welt!")
+//                } else {
+//                    ScrollView(showsIndicators: false) {
+//                        VStack {
+//                            ForEach($locationSearchListViewModel.locationSearchViewModels, id: \.id) { viewModel in
+//                                LocationSearchView(locationViewModel: viewModel)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+            
+            List(locationSearchListViewModel.locationViewModels) {
+                viewmodel in
+                LocationSearchView(locationViewModel: viewmodel, city: viewmodel.city)
+            }.listStyle(.plain)
+                
+            .navigationTitle("Location")
                 .toolbar {
-                    Button(action:addLocation) {
+                    Button(action: addLocation) {
                         Image(systemName: "plus.circle.fill")
-                    }.sheet(isPresented: $showAddLocation) {
-                        LocationEditView(isPresented: $showAddLocation)
                     }
+                }.sheet(isPresented: $showAddLocation) {
+                    LocationEditView(isPresented: $showAddLocation)
                 }
-
+ 
+            
         }
         
     }
+    
     
     // MARK: - Variables
     
     @State private var showAddLocation = false
     
-    @StateObject private var locationSearchListViewModel = LocationSearchDetailViewModel()
-    
+    @ObservedObject private var locationSearchListViewModel = LocationSearchListViewModel()
+
     // MARK: - Functions
     private func addLocation() {
         showAddLocation.toggle()
     }
-    
 }
-
-
 
 #Preview {
     LocationSearchListView()

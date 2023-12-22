@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-class LocationViewModel: ObservableObject {
+class LocationViewModel: ObservableObject, Identifiable {
     
     init(location: Location) {
         self.location = location
         self.id = location.id ?? UUID()
         self.city = location.city ?? ""
-        self.lat = location.lat 
-        self.lon = location.lon 
+        // self.lat = location.lat
+        // self.lon = location.lon
         
     }
     
@@ -24,8 +24,8 @@ class LocationViewModel: ObservableObject {
     let location: Location
     let id: UUID
     let city: String
-    let lat: Double
-    let lon: Double
+    // let lat: Double
+    // let lon: Double
     
     func delete() {
         container.context.delete(location)

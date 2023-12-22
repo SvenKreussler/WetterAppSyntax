@@ -6,23 +6,13 @@
 //
 
 import Foundation
-import CoreData
 
 class LocationSearchDetailViewModel: ObservableObject {
     
     
-    init() {
-        // fetchLocations()
-        
-//        let didSaveNotification = NSManagedObjectContext.didSaveObjectsNotification
-//        NotificationCenter.default.addObserver(self, selector: #selector(didSave(_:)), name: didSaveNotification, object: nil)
-    }
-    
     // MARK: - Variables
     
     private let container = PersistentStore.shared
-    
-    @Published var locationSearchViewModels: [LocationViewModel] = []
     
     @Published var city = ""
     
@@ -38,25 +28,11 @@ class LocationSearchDetailViewModel: ObservableObject {
         let location = Location(context: container.context)
         location.id = UUID()
         location.city = city
+        
+        container.save()
+        
     }
     
-//    @objc
-//    private func didSave(_ Notification: Notification) {
-//        fetchlocations()
-//    }
-    
-//    func fetchlocations() {
-//        let request = NSFetchRequest<Location>(entityName: "Location")
-//        request.sortDescriptors = [NSSortDescriptor(key: "city", ascending: true)]
-//        
-//        do {
-//            let locations = try container.context.fetch(request)
-//            self.locationSearchViewModels = locations.map {
-//                LocationViewModel(location: $0) }
-//        } catch {
-//            print("error fetching: \(error)")
-//        }
-//    }
 }
 
 

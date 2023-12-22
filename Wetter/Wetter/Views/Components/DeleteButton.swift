@@ -12,11 +12,12 @@ struct DeleteButton: View {
         Button(action: action) {
             ZStack {
                 Circle()
-                    .foregroundStyle(.white)
+                    .foregroundColor(.white)
                     .frame(width: 30)
-                Image(systemName: "tash.fill")
+ 
+                Image(systemName: "trash.fill")
                     .font(.subheadline)
-                    .foregroundStyle(.red)
+                    .foregroundColor(.red)
             }
         }
     }

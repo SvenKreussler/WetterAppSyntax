@@ -11,20 +11,23 @@ struct LocationSearchView: View {
     
     var body: some View {
         HStack {
-            Text(locationViewModel.city)
+            Text(city)
                 .font(.headline)
-                .cardViewStyling()
+            Spacer()
+            DeleteButton(action: locationViewModel.delete)
+                
             
-        }
-        // unklar, warum Newline gebraucht wird, damit Funktion erkannt wird
-        DeleteButton(action: locationViewModel.delete)
+        }.cardViewStyling()
+            .frame(width: 350, height: 100)
+        
     }
     
     // MARK: - Variables
     @ObservedObject var locationViewModel: LocationViewModel
     
+    let city: String
 }
 
 #Preview {
-    LocationSearchView(locationViewModel: .init(location: .init(context: PersistentStore.shared.context)))
+    LocationSearchView(locationViewModel: .init(location: .init(context: PersistentStore.shared.context)), city: "test")
 }

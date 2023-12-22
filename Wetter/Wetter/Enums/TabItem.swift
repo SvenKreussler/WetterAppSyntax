@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum TabItem {
     
@@ -31,6 +32,14 @@ enum TabItem {
         case .home:
             return "house"
 
+        }
+    }
+    
+    var view: AnyView {
+        switch self {
+        case .home: return AnyView(HomeView())
+        case .maps: return AnyView(MapView())
+        case .search: return AnyView(LocationSearchListView())
         }
     }
     

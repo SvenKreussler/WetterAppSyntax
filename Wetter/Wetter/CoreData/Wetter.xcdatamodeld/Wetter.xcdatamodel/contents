@@ -3,8 +3,6 @@
     <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Test" representedClassName="Test" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String"/>

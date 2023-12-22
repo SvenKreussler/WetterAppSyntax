@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class LocationSearchListViewModel: Observable {
+class LocationSearchListViewModel: ObservableObject {
     
     init() {
         fetchLocations()
@@ -19,9 +19,9 @@ class LocationSearchListViewModel: Observable {
     
     // MARK: - Variables
     
-    private let container = PersistentStore.shared
-    
     @Published var locationViewModels: [LocationViewModel] = []
+    
+    private let container = PersistentStore.shared
     
     
     // MARK: - Functions
@@ -32,7 +32,7 @@ class LocationSearchListViewModel: Observable {
     }
     
     func fetchLocations() {
-        let request = NSFetchRequest<Location>(entityName: "Wetter")
+        let request = NSFetchRequest<Location>(entityName: "Location")
         request.sortDescriptors = [NSSortDescriptor(key: "city", ascending: true)]
         
         do {

@@ -5,7 +5,7 @@
 //  Created by Sven Kreußler on 29.11.23.
 
 
-// https://stackoverflow.com/questions/58012540/ios-swiftui-searchbar-and-rest-api
+
 
 import Foundation
 
@@ -15,8 +15,8 @@ class LocationSearchViewModel: ObservableObject {
         self.location = location
         self.id = location.id ?? UUID()
         self.city = location.city ?? ""
-        self.lat = location.lat
-        self.lon = location.lon
+        // self.lat = location.lat
+        // self.lon = location.lon
         
     }
     
@@ -27,15 +27,17 @@ class LocationSearchViewModel: ObservableObject {
     @Published var locations = [LocationList]()
     
     
-    // MARK: - Functions
+    
     
     // MARK: - Variables
     let location: Location
     let id: UUID
     let city: String
-    let lat: Double
-    let lon: Double
+    //let lat: Double
+    //let lon: Double
     
+    
+    // MARK: - Functions
     func delete() {
         container.context.delete(location)
         container.save()
@@ -47,8 +49,8 @@ class LocationSearchViewModel: ObservableObject {
         let location = Location(context: container.context)
         location.id = UUID()
         location.city = city
-        location.lat = lat
-        location.lon = lon
+        //location.lat = lat
+        //location.lon = lon
         
         container.save()
         
