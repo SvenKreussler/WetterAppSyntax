@@ -13,36 +13,18 @@ struct LocationSearchListView: View {
     
     var body: some View {
         NavigationStack {
-//            Group {
-//                if locationSearchListViewModel.locationViewModels.isEmpty {
-//                    
-//                    //PlaceHolderView(icon: "Globe", title: "Endecke die Welt!")
-//                } else {
-//                    ScrollView(showsIndicators: false) {
-//                        VStack {
-//                            ForEach($locationSearchListViewModel.locationSearchViewModels, id: \.id) { viewModel in
-//                                LocationSearchView(locationViewModel: viewModel)
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-            
-            List(locationSearchListViewModel.locationViewModels) {
-                viewmodel in
+            List(locationSearchListViewModel.locationViewModels) { viewmodel in
                 LocationSearchView(locationViewModel: viewmodel, city: viewmodel.city)
-            }.listStyle(.plain)
-                
+            }
+            .listStyle(.plain)
             .navigationTitle("Location")
-                .toolbar {
-                    Button(action: addLocation) {
-                        Image(systemName: "plus.circle.fill")
-                    }
-                }.sheet(isPresented: $showAddLocation) {
-                    LocationEditView(isPresented: $showAddLocation)
+            .toolbar {
+                Button(action: addLocation) {
+                    Image(systemName: "plus.circle.fill")
                 }
- 
-            
+            }.sheet(isPresented: $showAddLocation) {
+                LocationEditView(isPresented: $showAddLocation)
+            }
         }
         
     }
@@ -53,7 +35,7 @@ struct LocationSearchListView: View {
     @State private var showAddLocation = false
     
     @ObservedObject private var locationSearchListViewModel = LocationSearchListViewModel()
-
+    
     // MARK: - Functions
     private func addLocation() {
         showAddLocation.toggle()

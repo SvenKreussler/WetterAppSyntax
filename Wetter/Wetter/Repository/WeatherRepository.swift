@@ -34,7 +34,7 @@ class WeatherRepository {
             let (data, _) = try await URLSession.shared.data(from: url)
             // (data, _) ´_´ ist platzhalter für respsonse: zb 200 für alles ok
             
-            let jsonString = String(data: data, encoding: .utf8)
+            // let jsonString = String(data: data, encoding: .utf8)
             // print("Received JSON: \(jsonString ?? "Unable to convert to string")")
             
             let weatherData = try JSONDecoder().decode(T.self, from: data)
@@ -51,6 +51,8 @@ class WeatherRepository {
             let urlString = "https://api.openweathermap.org/geo/1.0/direct"
             let locationQuery = "q=\(city)&limit=1&appid=\(weatherAPIKey)"
             let apiUrlString = "\(urlString)?\(locationQuery)"
+            
+        // https://api.openweathermap.org/geo/1.0/direct?q=berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190
 
             guard let url = URL(string: apiUrlString) else {
                 throw HTTPError.invalidURL
@@ -66,6 +68,4 @@ class WeatherRepository {
     
     
 }
-// https://api.openweathermap.org/data/3.0/onecall?lat=48.13,lon=11.57&units=metric&exclude=minutely,hourly,daily&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190 err
-
 // https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely,hourly,daily&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190 ok

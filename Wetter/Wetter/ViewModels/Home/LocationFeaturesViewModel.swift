@@ -12,22 +12,15 @@ import CoreLocation
 
 class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
+    private static var locationList = [LocationList(name: "--", lat: 0.00, lon: 0.00)]
+    /// Berlin, helsinki, kairo
+    //    [LocationList(name: "Berlin", lat: 52.5170365, lon: 13.3888599),
+    //     LocationList(name: "Helsinki", lat: 60.1674881, lon: 24.9427473),
+    //     LocationList(name: "Kairo", lat: 6.1327342, lon: 6.1327342)]
     
-    /// Berlin,München, Kario
-    
-    
-    private static var locationList =
-    ///Berlin, helsinki, kairo
-    [LocationList(name:"Berlin", lat: 52.5170365, lon: 13.3888599),
-     LocationList(name: "Helisnki", lat: 60.1674881, lon: 24.9427473),
-     LocationList(name: "Kairo", lat: 6.1327342, lon: 6.1327342)]
-    
-    // MARK: - Variables
-    
-    
-    
+
     init() {
-        fetchData()
+        fetchWeatherData()
     }
     
     
@@ -42,15 +35,22 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     // MARK: - Functions
     
+    func fetchLocationData() {
+        Task {
+            do {
+                LocationFeaturesViewModel.locationList = try await WeatherRepository.fetchLocationData(for: "Tokio")
+            } catch {
+                print("Request Failed with error: \(error)")
+            }
+        }
+    }
     
-    func fetchData() {
+    
+    func fetchWeatherData() {
         Task {
             do {
                 
-                self.weatherfeatures = try await WeatherRepository.fetchWeather(for: LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
-                
-
-                
+                weatherfeatures = try await WeatherRepository.fetchWeather(for: LocationFeaturesViewModel.locationList, responseType: LocationFeatures.self)
             } catch {
                 print("Request Failed with error: \(error)")
             }

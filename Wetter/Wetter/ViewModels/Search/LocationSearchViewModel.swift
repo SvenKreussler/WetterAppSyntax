@@ -15,8 +15,8 @@ class LocationSearchViewModel: ObservableObject {
         self.location = location
         self.id = location.id ?? UUID()
         self.city = location.city ?? ""
-        // self.lat = location.lat
-        // self.lon = location.lon
+        self.lat = location.lat ?? 0.0
+        self.lon = location.lon ?? 0.0
         
     }
     
@@ -33,8 +33,8 @@ class LocationSearchViewModel: ObservableObject {
     let location: Location
     let id: UUID
     let city: String
-    //let lat: Double
-    //let lon: Double
+    let lat: Float
+    let lon: Float
     
     
     // MARK: - Functions
@@ -49,11 +49,10 @@ class LocationSearchViewModel: ObservableObject {
         let location = Location(context: container.context)
         location.id = UUID()
         location.city = city
-        //location.lat = lat
-        //location.lon = lon
+        location.lat = lat
+        location.lon = lon
         
         container.save()
         
     }
 }
-

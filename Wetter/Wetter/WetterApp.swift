@@ -9,14 +9,13 @@ import SwiftUI
 
 @main
 struct WetterApp: App {
-    
+     
     
     
     var body: some Scene {
         WindowGroup {
             TabsView()
-                
-
+                 
         }
     }
 }

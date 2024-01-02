@@ -15,7 +15,6 @@ struct LocationEditView: View {
                 Form {
                     VStack {
                         TextField("Location", text: $locationDetailViewModel.city)
-                        
                     }
                 }
                 Button(action: save) {
@@ -29,6 +28,8 @@ struct LocationEditView: View {
                 Button(action: dismissView) {
                     Image(systemName: "xmark.circle.fill")
                 }
+                
+                
             }
         }
     }
@@ -52,5 +53,5 @@ struct LocationEditView: View {
 }
 
 #Preview {
-    LocationEditView(isPresented: .constant(false))
+    LocationEditView(isPresented: .constant(true))
 }

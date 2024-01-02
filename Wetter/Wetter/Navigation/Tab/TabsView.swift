@@ -11,17 +11,13 @@ struct TabsView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            
-            
             HomeView()
+                .environmentObject(locationSearchListViewModel)
                 .environmentObject(locationCurrent)
                 .tabItem {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
                 .tag(TabItem.home)
-                
-                
-            
             MapView()
                 .tabItem {
                     Label(TabItem.maps.title, systemImage: TabItem.maps.icon)
@@ -41,8 +37,11 @@ struct TabsView: View {
     
     @State private var selectedTab: TabItem = .home
     @StateObject private var locationCurrent = LocationFeaturesViewModel()
+    
+    @StateObject var locationSearchListViewModel = LocationSearchListViewModel()
 }
 
 #Preview {
     TabsView()
+        .environmentObject(LocationSearchListViewModel())
 }
