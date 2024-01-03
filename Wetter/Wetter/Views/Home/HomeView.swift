@@ -33,7 +33,7 @@ struct HomeView: View {
             }
         }
         .environmentObject(locationCurrent)
-        .environmentObject(locationSearchListViewModel)
+        // .environmentObject(locationSearchListViewModel)
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
@@ -41,7 +41,7 @@ struct HomeView: View {
     // MARK: - Variables
     @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
     
-    @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
+//    @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
 
 }
 

@@ -11,8 +11,10 @@ struct LocationSearchView: View {
     
     var body: some View {
         HStack {
-            Text(city)
-                .font(.headline)
+            
+                Text(city)
+                    .font(.headline)
+            
             Spacer()
             
                 DeleteButton(action: locationViewModel.delete)

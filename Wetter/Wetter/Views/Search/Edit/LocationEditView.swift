@@ -11,7 +11,7 @@ struct LocationEditView: View {
     
     var body: some View {
         NavigationStack {
-            Section("Ort") {
+            
                 Form {
                     VStack {
                         TextField("Location", text: $locationDetailViewModel.city)
@@ -21,7 +21,7 @@ struct LocationEditView: View {
                     Text("Speichern")
                 }
                 .disabled(locationDetailViewModel.disableSaving)
-            }
+            
             .navigationTitle("Location")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
