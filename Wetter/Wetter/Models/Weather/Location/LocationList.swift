@@ -8,8 +8,10 @@
 import Foundation
 
 struct LocationList: Codable {
+    
     var name: String
+    // var city: String
     var lat: Float
     var lon: Float
-    
+    var id = UUID()
 }

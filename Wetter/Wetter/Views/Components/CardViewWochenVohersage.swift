@@ -16,12 +16,12 @@ struct CardViewWochenVohersage: View {
                 
             ZStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(locationCurrent.weatherfeatures, id: \.lat) { item in
-                        ForEach(item.daily, id: \.dt) { item in
+                    ForEach(locationCurrent.weatherfeatures, id: \.lat) { city in
+                        ForEach(city.daily, id: \.dt) { item in
                             Divider()
                             HStack {
                                 Text("\(formattedTimeWeekDay(for: item.dt))")
-                                    .frame(width: 60, height: 20)
+                                    .frame(width: 60, height: 20, alignment: .leading)
                                 
                                 Text("\(Int(round(item.temp.day))) °C")
                                     .frame(width: 50, height: 20)
@@ -44,7 +44,7 @@ struct CardViewWochenVohersage: View {
                                     WeatherFeaturesViewSheet(isPresented: $shouldShowEditTask)
    
                                 }
-                            }.padding(30)
+                            }.padding(40)
                             
                         }
                 }

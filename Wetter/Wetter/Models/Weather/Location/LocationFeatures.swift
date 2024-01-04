@@ -9,6 +9,7 @@ import Foundation
 
 struct LocationFeatures: Codable {
     
+    
     let lat: Float
     let lon: Float
     let current: Current

@@ -34,7 +34,7 @@ struct LocationSearchListView: View {
     
     @State private var showAddLocation = false
     
-    @ObservedObject private var locationSearchListViewModel = LocationSearchListViewModel()
+    @ObservedObject var locationSearchListViewModel = LocationSearchListViewModel()
     
     // MARK: - Functions
     private func addLocation() {

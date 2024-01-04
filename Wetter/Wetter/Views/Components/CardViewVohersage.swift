@@ -18,7 +18,6 @@ struct CardViewVohersage: View {
                 .frame(alignment: .leading)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                
                 Divider()
                     .frame(height: 0.5)
                     .overlay(.black)

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class WeatherRepository {
     
@@ -34,8 +35,8 @@ class WeatherRepository {
             let (data, _) = try await URLSession.shared.data(from: url)
             // (data, _) ´_´ ist platzhalter für respsonse: zb 200 für alles ok
             
-            // let jsonString = String(data: data, encoding: .utf8)
-            // print("Received JSON: \(jsonString ?? "Unable to convert to string")")
+             let jsonString = String(data: data, encoding: .utf8)
+             print("Received JSON: \(jsonString ?? "Unable to convert to string")")
             
             let weatherData = try JSONDecoder().decode(T.self, from: data)
             allWeatherData.append(weatherData)
@@ -65,7 +66,6 @@ class WeatherRepository {
             let locationData = try JSONDecoder().decode([LocationList].self, from: data)
             return locationData
         }
-    
     
 }
 // https://api.openweathermap.org/data/3.0/onecall?lat=52,44&lon=13,40&units=metric&exclude=minutely,hourly,daily&lang=de&appid=29ab9d965c5e4da691c9d5979ff10190 ok

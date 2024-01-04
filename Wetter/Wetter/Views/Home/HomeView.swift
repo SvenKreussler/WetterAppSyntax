@@ -13,24 +13,25 @@ struct HomeView: View {
         
         TabView {
             ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
-                    VStack(spacing: 48) {
-                        HStack {
-                            Text("Temperature: \(Int(round(item.current.temp))) °C")
-                            Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
-                        }
+                
+                VStack(spacing: 48) {
+                    HStack {
                         
-                        CardViewVohersage()
-                            .cardViewStyling()
-                            .frame(width: 350, height: 100)
-                        // 1) struct als Parameter übergeben und dann anzeigen. Muss kein Binding erstellt sein.
-                        // 2) prüfen, ob mit Filterfunktion benötigte Daten weitergegeben werden können
-                        
-                        CardViewWochenVohersage()
-                            .cardViewStyling()
-                            .frame(width: 350, height: 300)
+                        Text("Temperature: \(Int(round(item.current.temp))) °C")
+                        Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
                     }
+                    
+                    CardViewVohersage()
+                        .cardViewStyling()
+                        .frame(width: 350, height: 100)
+                    
+                    CardViewWochenVohersage()
+                        .cardViewStyling()
+                        .frame(width: 350, height: 300)
+                }
                 
             }
+            
         }
         .environmentObject(locationCurrent)
         // .environmentObject(locationSearchListViewModel)
@@ -39,10 +40,11 @@ struct HomeView: View {
     }
     
     // MARK: - Variables
+    
     @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
     
-//    @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
-
+    // @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
+    
 }
 
 
