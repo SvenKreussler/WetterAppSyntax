@@ -26,12 +26,12 @@ struct HomeView: View {
                         .frame(width: 350, height: 100)
                         .environmentObject(locationCurrent)
                     
-                    NavigationStack() {
+                    
                         CardViewWochenVohersage()
                             .cardViewStyling()
                             .frame(width: 350, height: 300)
                             .environmentObject(locationCurrent)
-                    }
+                    
                     // https://developer.apple.com/documentation/swiftui/navigationstack
                     
                     //CardViewWochenVohersage() soll mit navagiationLink aufrufen
