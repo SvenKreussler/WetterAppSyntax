@@ -6,5 +6,4 @@
         <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="lon" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="Test" representedClassName="Test" syncable="YES" codeGenerationType="class"/>
 </model>

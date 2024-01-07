@@ -24,15 +24,3 @@ func geocodeAddress(_ address: String, completion: @escaping (CLLocationCoordina
         }
     }
 }
-
-
-//Example usage:
-
-//let addressToGeocode = "1600 Amphitheatre Parkway, Mountain View, CA" // Replace with your address
-//geocodeAddress(addressToGeocode) { (coordinate, error) in
-//    if let coordinate = coordinate {
-//        print("Latitude: \(coordinate.latitude), Longitude: \(coordinate.longitude)")
-//    } else if let error = error {
-//        print("Error: \(error.localizedDescription)")
-//    }
-//}

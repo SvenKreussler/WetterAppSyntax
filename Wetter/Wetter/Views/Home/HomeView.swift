@@ -24,16 +24,25 @@ struct HomeView: View {
                     CardViewVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
+                        .environmentObject(locationCurrent)
                     
-                    CardViewWochenVohersage()
-                        .cardViewStyling()
-                        .frame(width: 350, height: 300)
+                    NavigationStack() {
+                        CardViewWochenVohersage()
+                            .cardViewStyling()
+                            .frame(width: 350, height: 300)
+                            .environmentObject(locationCurrent)
+                    }
+                    // https://developer.apple.com/documentation/swiftui/navigationstack
+                    
+                    //CardViewWochenVohersage() soll mit navagiationLink aufrufen
+                    //
+                    //WeatherFeaturesChart.swift
                 }
                 
             }
             
         }
-        .environmentObject(locationCurrent)
+        
         // .environmentObject(locationSearchListViewModel)
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))

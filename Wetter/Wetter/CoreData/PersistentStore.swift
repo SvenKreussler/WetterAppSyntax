@@ -23,15 +23,10 @@ struct PersistentStore {
             }
         }
     }
-    
-    
-    
     // MARK: - Variables
     
     private let container: NSPersistentContainer
     var context: NSManagedObjectContext { container.viewContext }
-    
-    
     
     // MARK: - Functions
     
@@ -44,5 +39,4 @@ struct PersistentStore {
             NSLog("Unresolved error saving context: \(error), \(error.userInfo)")
         }
     }
-    
 }
