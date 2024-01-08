@@ -129,9 +129,9 @@
 		0E252A0C2B4C1C8600E0B27D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0E252A152B4C2F8700E0B27D /* OnboardingView.swift */,
 				0E252A0D2B4C1CE800E0B27D /* Subviews */,
 				0E252A122B4C243100E0B27D /* Enums */,
-				0E252A152B4C2F8700E0B27D /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";

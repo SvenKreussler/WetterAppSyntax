@@ -14,7 +14,7 @@ struct OnboardingItemView: View {
                 VStack {
                     Image(item.screen)
                         .resizable()
-                        // .scaledToFill()
+                        .scaledToFill()
                     
                     VStack(spacing: 12) {
                         Text(item.title)
