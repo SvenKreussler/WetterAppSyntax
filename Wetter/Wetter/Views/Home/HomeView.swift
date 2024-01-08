@@ -11,12 +11,19 @@ import CoreLocation
 struct HomeView: View {
     var body: some View {
         
+//        VStack {
+//            ForEach(locationCurrent.locationList) { location in
+//                Text("\(location.city)")
+//                Text("mache ein Onboarding!")
+//                
+//            }
+//        }
         TabView {
+            
             ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
                 
                 VStack(spacing: 48) {
                     HStack {
-                        
                         Text("Temperature: \(Int(round(item.current.temp))) °C")
                         Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
                     }
@@ -31,18 +38,11 @@ struct HomeView: View {
                             .cardViewStyling()
                             .frame(width: 350, height: 300)
                             .environmentObject(locationCurrent)
-                    
-                    // https://developer.apple.com/documentation/swiftui/navigationstack
-                    
-                    //CardViewWochenVohersage() soll mit navagiationLink aufrufen
-                    //
-                    //WeatherFeaturesChart.swift
                 }
                 
             }
             
         }
-        
         // .environmentObject(locationSearchListViewModel)
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))

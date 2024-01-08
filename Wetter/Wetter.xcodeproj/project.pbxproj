@@ -11,6 +11,10 @@
 		0E0B2BAB2B14D04700DDB408 /* WeatherFeatureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B2BAA2B14D04700DDB408 /* WeatherFeatureItem.swift */; };
 		0E0B2BAD2B14D49000DDB408 /* FeaturesSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B2BAC2B14D49000DDB408 /* FeaturesSelectButton.swift */; };
 		0E1CBC082B0F5DBB0099E7D2 /* CardViewStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1CBC072B0F5DBB0099E7D2 /* CardViewStyling.swift */; };
+		0E252A0F2B4C1D1A00E0B27D /* OnbaordingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A0E2B4C1D1A00E0B27D /* OnbaordingHeader.swift */; };
+		0E252A112B4C1ED100E0B27D /* OnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A102B4C1ED100E0B27D /* OnboardingItemView.swift */; };
+		0E252A142B4C245100E0B27D /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A132B4C245100E0B27D /* OnboardingItem.swift */; };
+		0E252A162B4C2F8700E0B27D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A152B4C2F8700E0B27D /* OnboardingView.swift */; };
 		0E351E8D2B303BC200B25629 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8C2B303BC200B25629 /* PersistentStore.swift */; };
 		0E351E8F2B3052E300B25629 /* geocodeAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8E2B3052E300B25629 /* geocodeAdress.swift */; };
 		0E351E912B30706A00B25629 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E902B30706A00B25629 /* LocationViewModel.swift */; };
@@ -60,6 +64,11 @@
 		0E0B2BAA2B14D04700DDB408 /* WeatherFeatureItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFeatureItem.swift; sourceTree = "<group>"; };
 		0E0B2BAC2B14D49000DDB408 /* FeaturesSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesSelectButton.swift; sourceTree = "<group>"; };
 		0E1CBC072B0F5DBB0099E7D2 /* CardViewStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewStyling.swift; sourceTree = "<group>"; };
+		0E252A0E2B4C1D1A00E0B27D /* OnbaordingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbaordingHeader.swift; sourceTree = "<group>"; };
+		0E252A102B4C1ED100E0B27D /* OnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItemView.swift; sourceTree = "<group>"; };
+		0E252A132B4C245100E0B27D /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		0E252A152B4C2F8700E0B27D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0E252A1F2B4C3E2E00E0B27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E351E8C2B303BC200B25629 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		0E351E8E2B3052E300B25629 /* geocodeAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geocodeAdress.swift; sourceTree = "<group>"; };
 		0E351E902B30706A00B25629 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -117,6 +126,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E252A0C2B4C1C8600E0B27D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0E252A0D2B4C1CE800E0B27D /* Subviews */,
+				0E252A122B4C243100E0B27D /* Enums */,
+				0E252A152B4C2F8700E0B27D /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0E252A0D2B4C1CE800E0B27D /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				0E252A0E2B4C1D1A00E0B27D /* OnbaordingHeader.swift */,
+				0E252A102B4C1ED100E0B27D /* OnboardingItemView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0E252A122B4C243100E0B27D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0E252A132B4C245100E0B27D /* OnboardingItem.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		0E351E872B303B1800B25629 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +208,7 @@
 		0E7758DE2B0B904F0069AF61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E252A0C2B4C1C8600E0B27D /* Onboarding */,
 				0E7758E92B0B928D0069AF61 /* Home */,
 				0E7758EA2B0B92930069AF61 /* Map */,
 				0E7758EB2B0B929A0069AF61 /* Search */,
@@ -353,6 +390,7 @@
 		0ED21BEC2B0B878F002EC3B0 /* Wetter */ = {
 			isa = PBXGroup;
 			children = (
+				0E252A1F2B4C3E2E00E0B27D /* Info.plist */,
 				0E351E872B303B1800B25629 /* CoreData */,
 				0E7758DF2B0B91610069AF61 /* File */,
 				0EE280D42B1F244B0093C6D9 /* Repository */,
@@ -492,8 +530,10 @@
 			files = (
 				0E7758FA2B0CAAF10069AF61 /* MapView.swift in Sources */,
 				0E1CBC082B0F5DBB0099E7D2 /* CardViewStyling.swift in Sources */,
+				0E252A142B4C245100E0B27D /* OnboardingItem.swift in Sources */,
 				0EBB084A2B1DD01C00DB2D83 /* LocationFeaturesViewModel.swift in Sources */,
 				0E5D52B92B2B298C0065E9AD /* FormattedTime.swift in Sources */,
+				0E252A0F2B4C1D1A00E0B27D /* OnbaordingHeader.swift in Sources */,
 				0E351E9F2B32F44500B25629 /* LocationEditView.swift in Sources */,
 				0E351EAA2B33182900B25629 /* PlaceHolderView.swift in Sources */,
 				0E351EA62B32FD0B00B25629 /* LocationSearchDetailViewModel.swift in Sources */,
@@ -509,6 +549,7 @@
 				0E7759022B0CBAB00069AF61 /* TagesvohersageItem.swift in Sources */,
 				0E79A60E2B0F954900F5528F /* WeatherFeaturesSelectDay.swift in Sources */,
 				0E351E9A2B319A1F00B25629 /* LocationSearchListViewModel.swift in Sources */,
+				0E252A162B4C2F8700E0B27D /* OnboardingView.swift in Sources */,
 				0E0B2BA72B14CFCF00DDB408 /* WeatherFeaturesSelectFeatures.swift in Sources */,
 				0EE280D62B1F246B0093C6D9 /* WeatherRepository.swift in Sources */,
 				0E0B2BAD2B14D49000DDB408 /* FeaturesSelectButton.swift in Sources */,
@@ -529,6 +570,7 @@
 				0E7758E62B0B92140069AF61 /* TabItem.swift in Sources */,
 				0EBB08442B19DCFF00DB2D83 /* LocationFeatures.swift in Sources */,
 				0ED21BEE2B0B878F002EC3B0 /* WetterApp.swift in Sources */,
+				0E252A112B4C1ED100E0B27D /* OnboardingItemView.swift in Sources */,
 				0E904D012B480BAE002848A3 /* LocationWithCity.swift in Sources */,
 				0E6967BE2B10AE3700FA1943 /* WeatherFeaturesViewSheet.swift in Sources */,
 				0E65AEAC2B0E264200331457 /* WochenvohersageItem.swift in Sources */,
@@ -669,9 +711,11 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wetter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -703,9 +747,11 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wetter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;

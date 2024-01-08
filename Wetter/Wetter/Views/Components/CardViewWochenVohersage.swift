@@ -18,22 +18,25 @@ struct CardViewWochenVohersage: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(locationCurrent.weatherfeatures, id: \.lat) { city in
                             ForEach(city.daily, id: \.dt) { item in
-                                
-                                    Divider()
-                                NavigationLink(destination: WeatherFeaturesChart()) {
-                                    HStack {
-                                        
-                                        Text("\(formattedTimeWeekDay(for: item.dt))")
-                                            .frame(width: 60, height: 20, alignment: .leading)
-                                        
-                                        Text("\(Int(round(item.temp.day))) °C")
-                                            .frame(width: 50, height: 20)
-                                        Spacer()
-                                    }
+                                NavigationLink (destination: WeatherFeaturesChart())
+                                { HStack {
+                                    
+                                    Text("\(formattedTimeWeekDay(for: item.dt))")
+                                        .frame(width: 60, height: 20, alignment: .leading)
+                                    
+                                    Text("\(Int(round(item.temp.day))) °C")
+                                        .frame(width: 50, height: 20)
+                                    Spacer()
                                 }
+                                }.padding()
+                                 .background(.blue)
+                                 .foregroundColor(.black)
+                                
                             }
                         }
+                        
                     }
+                    
                 }
                 
             }
