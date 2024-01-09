@@ -15,6 +15,8 @@
 		0E252A112B4C1ED100E0B27D /* OnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A102B4C1ED100E0B27D /* OnboardingItemView.swift */; };
 		0E252A142B4C245100E0B27D /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A132B4C245100E0B27D /* OnboardingItem.swift */; };
 		0E252A162B4C2F8700E0B27D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A152B4C2F8700E0B27D /* OnboardingView.swift */; };
+		0E252A212B4D4C1900E0B27D /* OnBoardingDissmiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A202B4D4C1900E0B27D /* OnBoardingDissmiss.swift */; };
+		0E252A232B4D5A3C00E0B27D /* CardViewWochenListStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A222B4D5A3C00E0B27D /* CardViewWochenListStyling.swift */; };
 		0E351E8D2B303BC200B25629 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8C2B303BC200B25629 /* PersistentStore.swift */; };
 		0E351E8F2B3052E300B25629 /* geocodeAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8E2B3052E300B25629 /* geocodeAdress.swift */; };
 		0E351E912B30706A00B25629 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E902B30706A00B25629 /* LocationViewModel.swift */; };
@@ -69,6 +71,8 @@
 		0E252A132B4C245100E0B27D /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		0E252A152B4C2F8700E0B27D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0E252A1F2B4C3E2E00E0B27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0E252A202B4D4C1900E0B27D /* OnBoardingDissmiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingDissmiss.swift; sourceTree = "<group>"; };
+		0E252A222B4D5A3C00E0B27D /* CardViewWochenListStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewWochenListStyling.swift; sourceTree = "<group>"; };
 		0E351E8C2B303BC200B25629 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		0E351E8E2B3052E300B25629 /* geocodeAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geocodeAdress.swift; sourceTree = "<group>"; };
 		0E351E902B30706A00B25629 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			children = (
 				0E65AEB02B0F551000331457 /* DefaultBackground.swift */,
 				0E1CBC072B0F5DBB0099E7D2 /* CardViewStyling.swift */,
+				0E252A222B4D5A3C00E0B27D /* CardViewWochenListStyling.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				0E5D52B82B2B298C0065E9AD /* FormattedTime.swift */,
 				0E351EA92B33182900B25629 /* PlaceHolderView.swift */,
 				0E351EAB2B33204500B25629 /* DeleteButton.swift */,
+				0E252A202B4D4C1900E0B27D /* OnBoardingDissmiss.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				0E351E9F2B32F44500B25629 /* LocationEditView.swift in Sources */,
 				0E351EAA2B33182900B25629 /* PlaceHolderView.swift in Sources */,
 				0E351EA62B32FD0B00B25629 /* LocationSearchDetailViewModel.swift in Sources */,
+				0E252A232B4D5A3C00E0B27D /* CardViewWochenListStyling.swift in Sources */,
 				0E351EAC2B33204500B25629 /* DeleteButton.swift in Sources */,
 				0E6967C02B10E4A000FA1943 /* WeatherFeaturesChart.swift in Sources */,
 				0EBA63442B17713D0001F895 /* LocationSearchViewModel.swift in Sources */,
@@ -558,6 +565,7 @@
 				0EBA633D2B16212C0001F895 /* LocationSearch.swift in Sources */,
 				0E351E8D2B303BC200B25629 /* PersistentStore.swift in Sources */,
 				0E65AEB12B0F551000331457 /* DefaultBackground.swift in Sources */,
+				0E252A212B4D4C1900E0B27D /* OnBoardingDissmiss.swift in Sources */,
 				0E351EA82B33158200B25629 /* LocationSearchView.swift in Sources */,
 				0EE280DD2B20B26A0093C6D9 /* ReverseLocation.swift in Sources */,
 				0E79A60B2B0F8ED700F5528F /* CustomColors.swift in Sources */,

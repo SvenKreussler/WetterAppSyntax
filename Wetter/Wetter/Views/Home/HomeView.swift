@@ -11,13 +11,6 @@ import CoreLocation
 struct HomeView: View {
     var body: some View {
         
-//        VStack {
-//            ForEach(locationCurrent.locationList) { location in
-//                Text("\(location.city)")
-//                Text("mache ein Onboarding!")
-//                
-//            }
-//        }
         TabView {
             
             ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
@@ -34,15 +27,18 @@ struct HomeView: View {
                         .environmentObject(locationCurrent)
                     
                     
-                        CardViewWochenVohersage()
-                            .cardViewStyling()
-                            .frame(width: 350, height: 300)
-                            .environmentObject(locationCurrent)
+                    CardViewWochenVohersage()
+                        .cardViewStyling()
+                        .frame(width: 350, height: 300)
+                        .environmentObject(locationCurrent)
+                        
+                        
                 }
                 
             }
             
-        }
+        }.navigationBarHidden(true)
+        
         // .environmentObject(locationSearchListViewModel)
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))

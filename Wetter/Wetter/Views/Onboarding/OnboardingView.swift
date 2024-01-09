@@ -16,8 +16,16 @@ struct OnboardingView: View {
             OnbaordingHeader()
                 .padding(24)
             OnboardingItemView()
+            
+            OnBoardingDissmiss(title: "Los Geht's", action: letsGo)
         }
         
+    }
+    
+    // MARK: - Functions
+    
+    private func letsGo() {
+        onboarding = true
     }
 }
 
