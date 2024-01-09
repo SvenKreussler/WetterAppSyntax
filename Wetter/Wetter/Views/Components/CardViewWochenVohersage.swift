@@ -13,12 +13,12 @@ struct CardViewWochenVohersage: View {
         VStack(alignment: .leading) {
             Text("Vohersage für 7 Tage")
                 .frame(width: 200, height: 20, alignment: .leading)
-            NavigationView {
+            NavigationStack {
                 ZStack {
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(locationCurrent.weatherfeatures, id: \.lat) { city in
                             ForEach(city.daily, id: \.dt) { item in
-                                NavigationLink (destination: WeatherFeaturesChart()) {
+                                NavigationLink(destination: WeatherFeaturesChart()) {
                                     HStack {
                                         Text("\(formattedTimeWeekDay(for: item.dt))")
                                             .frame(width: 60, height: 20, alignment: .leading)
@@ -28,11 +28,11 @@ struct CardViewWochenVohersage: View {
                                         Spacer()
                                     }
                                 }
-                                .padding()
+                                .toolbar(.hidden)
+                                    .padding()
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
                                 .background(.blue)
                                 .foregroundColor(.black)
-                                    
                             }
                         }
                         
@@ -41,6 +41,7 @@ struct CardViewWochenVohersage: View {
                 }
                 
             }
+            
             
 
 

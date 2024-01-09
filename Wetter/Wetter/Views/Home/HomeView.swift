@@ -25,19 +25,21 @@ struct HomeView: View {
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
                         .environmentObject(locationCurrent)
-                    
-                    
+                        
                     CardViewWochenVohersage()
+                        
                         .cardViewStyling()
                         .frame(width: 350, height: 300)
                         .environmentObject(locationCurrent)
+                        
+                        
                         
                         
                 }
                 
             }
             
-        }.navigationBarHidden(true)
+        }
         
         // .environmentObject(locationSearchListViewModel)
         .tabViewStyle(.page)

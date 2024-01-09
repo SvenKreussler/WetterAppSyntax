@@ -12,14 +12,17 @@ struct OnboardingView: View {
     @AppStorage("onboarding") private var onboarding = false
     
     var body: some View {
-        VStack(spacing: 0) {
-            OnbaordingHeader()
-                .padding(24)
-            OnboardingItemView()
-            
-            OnBoardingDissmiss(title: "Los Geht's", action: letsGo)
+        TabView {
+            VStack(spacing: 0) {
+                OnbaordingHeader()
+                    .padding(24)
+                OnboardingItemView()
+                
+                OnBoardingDissmiss(title: "Los Geht's", action: letsGo)
+            }
         }
-        
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
     
     // MARK: - Functions

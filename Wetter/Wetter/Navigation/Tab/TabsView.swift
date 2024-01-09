@@ -18,7 +18,7 @@ struct TabsView: View {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
                 .tag(TabItem.home)
-            
+                
             MapView()
                 .tabItem {
                     Label(TabItem.maps.title, systemImage: TabItem.maps.icon)

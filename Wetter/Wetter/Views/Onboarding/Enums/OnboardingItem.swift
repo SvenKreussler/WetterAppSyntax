@@ -52,7 +52,7 @@ enum OnboardingItem: String, Identifiable, CaseIterable {
         case .homeFrist:
             return "Die erste Ansicht Übersicht vom Wetter"
         case .homeSecound:
-            return "jeweilige Tag kann gewählt werden und eine Temperaturübersicht (grafisch) wird angezeigt"
+            return "Temperaturübersicht wird angezeigt"
         case .locationSelectFirst:
             return "Wählen Sie die Ortschaft aus, von der sie das Wetter haben möchten"
         case .locationSelectSecound:

@@ -14,7 +14,7 @@ struct OnboardingItemView: View {
                 VStack {
                     Image(item.screen)
                         .resizable()
-                        .scaledToFill()
+                        .scaledToFit()
                     
                     VStack(spacing: 12) {
                         Text(item.title)
@@ -31,7 +31,7 @@ struct OnboardingItemView: View {
                 .padding(.horizontal, 24)
             }
         }
-        .tabViewStyle(.page)
+        
     }
 }
 
