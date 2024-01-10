@@ -17,12 +17,13 @@ struct OnboardingView: View {
                 OnbaordingHeader()
                     .padding(24)
                 OnboardingItemView()
+                    
                 
                 OnBoardingDissmiss(title: "Los Geht's", action: letsGo)
             }
         }
         .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        
     }
     
     // MARK: - Functions

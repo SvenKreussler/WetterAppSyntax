@@ -26,7 +26,7 @@ struct OnboardingItemView: View {
                     }
                         
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .frame(width:300, height:600 )
                 .clipShape(RoundedRectangle(cornerRadius: 24))
                 .padding(.horizontal, 24)
             }

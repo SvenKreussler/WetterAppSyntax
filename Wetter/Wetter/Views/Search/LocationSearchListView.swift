@@ -15,7 +15,9 @@ struct LocationSearchListView: View {
         NavigationStack {
             List(locationSearchListViewModel.locationViewModels) { viewmodel in
                 LocationSearchView(locationViewModel: viewmodel, city: viewmodel.city)
+                
             }
+                       
             .listStyle(.plain)
             .navigationTitle("Location")
             .toolbar {

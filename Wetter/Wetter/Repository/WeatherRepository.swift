@@ -35,7 +35,7 @@ class WeatherRepository {
             let weatherData = try JSONDecoder().decode(T.self, from: data)
             allWeatherData.append(weatherData)
             
-            // print(jsonString)
+            print(jsonString)
             
             
         }
