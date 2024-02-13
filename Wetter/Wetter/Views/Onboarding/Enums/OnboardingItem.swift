@@ -35,7 +35,7 @@ enum OnboardingItem: String, Identifiable, CaseIterable {
         case .homeFrist:
             return "Erste Ansicht"
         case .homeSecound:
-            return "Auswahl Tageszusammendassung"
+            return "Auswahl Tageszusammenfassung"
         case .locationSelectFirst:
             return "Ausgewählte Ortschaften"
         case .locationSelectSecound:
