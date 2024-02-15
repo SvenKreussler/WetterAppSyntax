@@ -45,6 +45,7 @@
 		0E79A60E2B0F954900F5528F /* WeatherFeaturesSelectDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A60D2B0F954900F5528F /* WeatherFeaturesSelectDay.swift */; };
 		0E904CFF2B443F24002848A3 /* Wetter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E904CFD2B443F24002848A3 /* Wetter.xcdatamodeld */; };
 		0E904D012B480BAE002848A3 /* LocationWithCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E904D002B480BAE002848A3 /* LocationWithCity.swift */; };
+		0EA2DB3A2B7B93C0000CE93C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2DB392B7B93C0000CE93C /* APIKey.swift */; };
 		0EBA633D2B16212C0001F895 /* LocationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA633C2B16212C0001F895 /* LocationSearch.swift */; };
 		0EBA63442B17713D0001F895 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA63432B17713D0001F895 /* LocationSearchViewModel.swift */; };
 		0EBA63472B1773640001F895 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA63462B1773640001F895 /* HTTPError.swift */; };
@@ -102,6 +103,7 @@
 		0E79A60D2B0F954900F5528F /* WeatherFeaturesSelectDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFeaturesSelectDay.swift; sourceTree = "<group>"; };
 		0E904CFE2B443F24002848A3 /* Wetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wetter.xcdatamodel; sourceTree = "<group>"; };
 		0E904D002B480BAE002848A3 /* LocationWithCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWithCity.swift; sourceTree = "<group>"; };
+		0EA2DB392B7B93C0000CE93C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		0EBA633C2B16212C0001F895 /* LocationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearch.swift; sourceTree = "<group>"; };
 		0EBA63432B17713D0001F895 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		0EBA63462B1773640001F895 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				0EBA63462B1773640001F895 /* HTTPError.swift */,
+				0EA2DB392B7B93C0000CE93C /* APIKey.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				0E351E9F2B32F44500B25629 /* LocationEditView.swift in Sources */,
 				0E351EAA2B33182900B25629 /* PlaceHolderView.swift in Sources */,
 				0E351EA62B32FD0B00B25629 /* LocationSearchDetailViewModel.swift in Sources */,
+				0EA2DB3A2B7B93C0000CE93C /* APIKey.swift in Sources */,
 				0E252A232B4D5A3C00E0B27D /* CardViewWochenListStyling.swift in Sources */,
 				0E351EAC2B33204500B25629 /* DeleteButton.swift in Sources */,
 				0E6967C02B10E4A000FA1943 /* WeatherFeaturesChart.swift in Sources */,
@@ -720,6 +724,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wetter/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Notwendig für Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -757,6 +763,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wetter/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Notwendig für Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

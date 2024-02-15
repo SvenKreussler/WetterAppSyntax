@@ -10,7 +10,8 @@ import CoreLocation
 
 class WeatherRepository {
     
-    private static var weatherAPIKey = "29ab9d965c5e4da691c9d5979ff10190"
+        
+    private static let weatherAPIKey = APIKey.openWeatherMap.key
     
     static func fetchWeather<T: Codable>(for locations: [LocationList], responseType: T.Type) async throws -> [T] {
         var allWeatherData: [T] = []
@@ -48,7 +49,7 @@ class WeatherRepository {
         let apiUrlString = "\(urlString)?\(locationQuery)"
         
         // https://api.openweathermap.org/geo/1.0/direct?q=berlin&limit=1&appid=29ab9d965c5e4da691c9d5979ff10190
-        
+                
         guard let url = URL(string: apiUrlString) else {
             throw HTTPError.invalidURL
         }

@@ -27,5 +27,5 @@ struct WetterApp: App {
     
     // MARK: - Varibales
     
-    @AppStorage("onboarding") private var onboarding = true
+    @AppStorage("onboarding") private var onboarding = false
 }

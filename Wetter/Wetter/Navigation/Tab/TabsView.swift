@@ -18,7 +18,7 @@ struct TabsView: View {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
                 .tag(TabItem.home)
-                .onAppear(perform: locationCurrent.fetchWeatherData)
+                //.onAppear(perform: locationCurrent.fetchWeatherData)
                 
             MapView()
                 .tabItem {
