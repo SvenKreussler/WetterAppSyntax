@@ -13,9 +13,8 @@ class LocationViewModel: ObservableObject, Identifiable {
         self.location = location
         self.id = location.id ?? UUID()
         self.city = location.city ?? ""
-        // self.lat = location.lat
-        // self.lon = location.lon
-        
+        self.lat = location.lat
+        self.lon = location.lon
     }
     
     private let container = PersistentStore.shared
@@ -24,8 +23,8 @@ class LocationViewModel: ObservableObject, Identifiable {
     let location: Location
     let id: UUID
     let city: String
-    // let lat: Double
-    // let lon: Double
+    let lat: Float
+    let lon: Float
     
     func delete() {
         container.context.delete(location)

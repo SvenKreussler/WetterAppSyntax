@@ -20,6 +20,7 @@ class LocationSearchListViewModel: ObservableObject {
     // MARK: - Variables
     
     @Published var locationViewModels: [LocationViewModel] = []
+
     
     private let container = PersistentStore.shared
     

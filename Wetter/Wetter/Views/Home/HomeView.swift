@@ -14,8 +14,6 @@ struct HomeView: View {
         TabView {
             ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
                 
-                    
-                    
                     VStack(spacing: 48) {
                         HStack {
                             Text("Temperature: \(Int(round(item.current.temp))) °C")

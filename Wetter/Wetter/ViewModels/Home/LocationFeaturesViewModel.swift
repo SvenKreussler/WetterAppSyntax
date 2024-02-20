@@ -23,7 +23,7 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
         // fetchLocationData()
          fetchWeatherData()
         // fetchLocationDataLocal()
-        // getCityNames()
+        getCityNames()
     }
     // MARK: - Variables
     
