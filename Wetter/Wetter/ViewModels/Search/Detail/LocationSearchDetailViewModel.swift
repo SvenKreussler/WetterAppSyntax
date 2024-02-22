@@ -18,6 +18,8 @@ class LocationSearchDetailViewModel: ObservableObject {
     private let geocoder = CLGeocoder()
     
     
+    static let shared = LocationSearchDetailViewModel()
+    
     
     @Published var city = ""
     
@@ -29,11 +31,13 @@ class LocationSearchDetailViewModel: ObservableObject {
     
     // MARK: - Functions
     
-    func save() {
+    func save(cityName: String, coordinates: CLLocationCoordinate2D) {
         let location = Location(context: container.context)
         location.id = UUID()
-        location.city = city
-        //TODO: implement lan/lat for persistent saving
+        location.city = cityName
+        location.lat = Float(coordinates.latitude)
+        location.lon = Float(coordinates.longitude)
+        
         
         container.save()
         

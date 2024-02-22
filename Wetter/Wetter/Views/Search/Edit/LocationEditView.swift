@@ -23,31 +23,15 @@ struct LocationEditView: View {
             }
             .disabled(locationDetailViewModel.disableSaving)
             
-            Button("Get Coordinates") {
-                requestLocationAuthorization()
-            }.padding()
-            
-            
-                .navigationTitle("Location")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    Button(action: dismissView) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    
-                    
+            .navigationTitle("Location")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button(action: dismissView) {
+                    Image(systemName: "xmark.circle.fill")
                 }
-        }
-        
-        if let coordinates = coordinates {
-            Text("Latitude: \(coordinates.latitude), Longitude: \(coordinates.longitude)")
-                .padding()
-        }
-        
-        if let errorMessage = errorMessage {
-            Text(errorMessage)
-                .foregroundColor(.red)
-                .padding()
+                
+                
+            }
         }
     }
     
@@ -70,8 +54,16 @@ struct LocationEditView: View {
     }
     
     private func save() {
-        locationDetailViewModel.save()
-        dismissView()
+        locationDetailViewModel.coordinates(for: locationDetailViewModel.city) { coordinates, error in
+            if let coordinates = coordinates {
+                                
+                LocationSearchDetailViewModel.shared.save(cityName: locationDetailViewModel.city, coordinates: coordinates)
+                dismissView()
+                
+            } else {
+                errorMessage = "Failed to obtain coordinates: \(error?.localizedDescription ?? "Unknown error")"
+            }
+        }
     }
     
     
@@ -96,15 +88,15 @@ struct LocationEditView: View {
     }
     
     private func fetchCoordinates() {
-            locationManager.coordinates(for: locationDetailViewModel.city) { result, error in
-                if let result = result {
-                    coordinates = result
-                    errorMessage = nil
-                } else if let error = error {
-                    errorMessage = "Error: \(error.localizedDescription)"
-                }
+        locationManager.coordinates(for: locationDetailViewModel.city) { result, error in
+            if let result = result {
+                coordinates = result
+                errorMessage = nil
+            } else if let error = error {
+                errorMessage = "Error: \(error.localizedDescription)"
             }
         }
+    }
 }
 
 #Preview {
