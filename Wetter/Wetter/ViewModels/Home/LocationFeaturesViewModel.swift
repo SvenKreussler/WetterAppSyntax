@@ -20,10 +20,9 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     init() {
         
-        // fetchLocationData()
-         fetchWeatherData()
-        // fetchLocationDataLocal()
-        getCityNames()
+        fetchWeatherData()
+        fetchLocations()
+        
     }
     // MARK: - Variables
     
@@ -37,50 +36,13 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
        
     private let container = PersistentStore.shared
     
+    @Published var locationViewModels: [LocationViewModel] = []
+    
+    
     
     // MARK: - Functions
     
-    func getCityNames() {
-            for (index, location) in locations.enumerated() {
-                let components = location.components(separatedBy: ",")
-                guard components.count == 2,
-                      let latitude = Double(components[0]),
-                      let longitude = Double(components[1]) else {
-                    continue
-                }
-
-                reverseGeocodeLocation(latitude: latitude, longitude: longitude) { result in
-                    DispatchQueue.main.async {
-                        self.locations[index] = "\(latitude), \(longitude), \(result)"
-                    }
-                }
-            }
-        }
-    
-    func fetchLocationData() {
-        // Startet ein API Call, um den Städtenamen in Längen und Breitengrad aufzulösen
-        
-        Task {
-            do {
-                self.weatherfeatures = try await WeatherRepository.fetchWeather(for: locationList, responseType: LocationFeatures.self)
-                
-            } catch {
-                print("Request Failed with error: \(error)")
-            }
-        }
-    }
-    
-    func resolveCoordinatesToName() {
-        
-        Task {
-            do {
-                print("Nix")
-            } catch {
-                print("Error: \(error)")
-            }
-        }
-    }
-    
+       
     func fetchWeatherData() {
         Task {
             do {
@@ -89,6 +51,18 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
             } catch {
                 print("Request Failed with error: \(error)")
             }
+        }
+    }
+    
+    func fetchLocations() {
+        let request = NSFetchRequest<Location>(entityName: "Location")
+        request.sortDescriptors = [NSSortDescriptor(key: "city", ascending: true)]
+        
+        do {
+            let locations = try container.context.fetch(request)
+            self.locationViewModels = locations.map { LocationViewModel(location: $0) }
+        } catch {
+            print("error fetching: \(error)")
         }
     }
     

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreLocation
+import CoreData
 
 @main
 struct WetterApp: App {
@@ -20,6 +21,7 @@ struct WetterApp: App {
                         OnboardingView()
                     }
                 }
+                .environment(\.managedObjectContext, persistentContainer.viewContext)
                  
         }
     }
@@ -27,4 +29,7 @@ struct WetterApp: App {
     // MARK: - Varibales
     
     @AppStorage("onboarding") private var onboarding = false
+    
+    let persistentContainer = NSPersistentContainer(name: "Wetter")
+    
 }

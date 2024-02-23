@@ -20,7 +20,7 @@ struct PersistentStore {
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 fatalError("Error with Core Data: \(error), \(error.userInfo)")
-            }
+            }   
         }
     }
     // MARK: - Variables
@@ -39,4 +39,5 @@ struct PersistentStore {
             NSLog("Unresolved error saving context: \(error), \(error.userInfo)")
         }
     }
+    
 }

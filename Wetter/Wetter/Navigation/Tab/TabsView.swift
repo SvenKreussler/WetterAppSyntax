@@ -42,6 +42,8 @@ struct TabsView: View {
     @StateObject private var locationCurrent = LocationFeaturesViewModel()
     
     @StateObject var locationSearchListViewModel = LocationSearchListViewModel()
+    
+    @Environment(\.managedObjectContext) private var viewContext
 }
 
 #Preview {
