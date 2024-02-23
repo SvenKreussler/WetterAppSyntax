@@ -13,15 +13,14 @@ import CoreLocation
 
 class LocationFeaturesViewModel: ObservableObject, Identifiable {
     /// Berlin, helsinki, kairo
-    @Published var locationList = [LocationList(city: "Berlin", lat: 52.5170365, lon: 13.3888599),
-     LocationList(city: "Helsinki", lat: 60.1674881, lon: 24.9427473),
-     LocationList(city: "Kairo", lat: 6.1327342, lon: 6.1327342)]
+    @Published var locationList = [LocationList()]
     
     
     init() {
         
         fetchWeatherData()
         fetchLocations()
+        
         
     }
     // MARK: - Variables
@@ -33,16 +32,17 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     @Published var locations: [String] = []
     
-       
+    
     private let container = PersistentStore.shared
     
     @Published var locationViewModels: [LocationViewModel] = []
+    // Saved by User
     
     
     
     // MARK: - Functions
     
-       
+    
     func fetchWeatherData() {
         Task {
             do {
@@ -60,10 +60,13 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
         
         do {
             let locations = try container.context.fetch(request)
-            self.locationViewModels = locations.map { LocationViewModel(location: $0) }
+            // Map LocationViewModel properties to LocationList and assign them to locationList
+            self.locationList = locations.map { LocationList(city: $0.city ?? "", lat: $0.lat, lon: $0.lon) }
         } catch {
             print("error fetching: \(error)")
         }
     }
+    
+    
     
 }
