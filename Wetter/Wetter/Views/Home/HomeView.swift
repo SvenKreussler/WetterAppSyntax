@@ -25,6 +25,7 @@ struct HomeView: View {
                     
                     
                     HStack {
+                        
                         Text("Temperature: \(Int(round(item.current.temp))) °C")
                         Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
                         
