@@ -18,13 +18,17 @@ struct TabsView: View {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
                 .tag(TabItem.home)
-                
-                //.onAppear(perform: locationCurrent.fetchLocations)
-                .onAppear{
-                    locationCurrent.fetchLocations()
-                    locationCurrent.fetchWeatherData()
+            
+
+            
+            
+            .onAppear {
+                Task {
+                    await locationCurrent.fetchLocations()
+                    await locationCurrent.fetchWeatherData()
                 }
-                
+            }
+            
             MapView()
                 .tabItem {
                     Label(TabItem.maps.title, systemImage: TabItem.maps.icon)

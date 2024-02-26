@@ -15,7 +15,8 @@ struct LocationSearchView: View {
                 .font(.headline)
             Spacer()
             DeleteButton(action: locationViewModel.delete)
-                //.frame(width: 30)
+                .frame(width: 30)
+            
         
         }.cardViewStyling()
             .frame(width: 350, height: 100)

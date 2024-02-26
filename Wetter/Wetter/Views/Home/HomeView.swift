@@ -11,19 +11,12 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
-            
-
         TabView {
-
+            
+                            
             ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
-                ForEach(locationCurrent.locationViewModels, id: \.city) {
-                    item in
-                    Text("Stadt: \(item.city), Koordinaten: \(item.lat), \(item.lon)")
-                }
                 
                 VStack(spacing: 48) {
-                    
-                    
                     HStack {
                         
                         Text("Temperature: \(Int(round(item.current.temp))) °C")
@@ -50,11 +43,11 @@ struct HomeView: View {
         
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
-
+        
         
     }
     
-        
+    
     
     // MARK: - Variables
     
@@ -69,6 +62,6 @@ struct HomeView: View {
 #Preview {
     HomeView()
         .environmentObject(LocationFeaturesViewModel())
-        // .environment(viewContext)
-        
+    // .environment(viewContext)
+    
 }

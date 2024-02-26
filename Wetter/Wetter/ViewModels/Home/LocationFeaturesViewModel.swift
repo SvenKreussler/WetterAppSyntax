@@ -12,15 +12,29 @@ import CoreLocation
 @MainActor
 
 class LocationFeaturesViewModel: ObservableObject, Identifiable {
-    /// Berlin, helsinki, kairo
+    
     @Published var locationList = [LocationList()]
+    
+    private var weatherFetchTimer: Timer?
+    private let fetchInterval: TimeInterval = 3600
+    
+    
+    @Published var locations: [String] = []
+    
+    private let container = PersistentStore.shared
+    
+    @Published var locationViewModels: [LocationViewModel] = []
+    // Saved by User
     
     
     init() {
         
-        fetchWeatherData()
+        // fetchWeatherData()
         fetchLocations()
-        
+        Task {
+            await fetchWeatherData()
+            scheduleWeatherFetchTimer()
+        }
         
     }
     // MARK: - Variables
@@ -30,27 +44,18 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
                                                                             hourly: [LocationFeatures.Hourly(dt: 0, temp: 0.0)],
                                                                             daily: [LocationFeatures.Daily(dt: 0, temp: LocationFeatures.Temp(day: 0.00, min: 0.00, max: 0.00), uvi: 0.00)])]
     
-    @Published var locations: [String] = []
     
-    
-    private let container = PersistentStore.shared
-    
-    @Published var locationViewModels: [LocationViewModel] = []
-    // Saved by User
     
     
     
     // MARK: - Functions
     
     
-    func fetchWeatherData() {
-        Task {
-            do {
-                
-                weatherfeatures = try await WeatherRepository.fetchWeather(for: locationList, responseType: LocationFeatures.self)
-            } catch {
-                print("Request Failed with error: \(error)")
-            }
+    func fetchWeatherData() async {
+        do {
+            weatherfeatures = try await WeatherRepository.fetchWeather(for: locationList, responseType: LocationFeatures.self)
+        } catch {
+            print("Request Failed with error: \(error)")
         }
     }
     
@@ -64,6 +69,19 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
             self.locationList = locations.map { LocationList(city: $0.city ?? "", lat: $0.lat, lon: $0.lon) }
         } catch {
             print("error fetching: \(error)")
+        }
+    }
+    
+    private func scheduleWeatherFetchTimer() {
+        // Invalidate any existing timer before creating a new one
+        weatherFetchTimer?.invalidate()
+        
+        // Create a weak reference to self to avoid strong reference cycle
+        weatherFetchTimer = Timer.scheduledTimer(withTimeInterval: fetchInterval, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            Task {
+                await self.fetchWeatherData()
+            }
         }
     }
     
