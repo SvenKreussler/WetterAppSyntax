@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 23.11.23.
 //
+//  abstact: custom colors
 
 import SwiftUI
 

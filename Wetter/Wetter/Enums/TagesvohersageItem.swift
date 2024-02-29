@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 21.11.23.
 //
+//  abstract: Enum for tagevohersage
 
 import Foundation
 

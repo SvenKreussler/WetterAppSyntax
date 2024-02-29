@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 21.11.23.
 //
+//  abstract: View of user provided location items
 
 import SwiftUI
 import CoreLocation

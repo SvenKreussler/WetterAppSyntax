@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 08.01.24.
 //
+//  abstract: on boarding view item
 
 import SwiftUI
 

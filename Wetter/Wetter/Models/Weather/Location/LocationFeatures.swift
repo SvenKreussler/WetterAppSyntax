@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 01.12.23.
 //
+//  abstract: model for API-Call 
 
 import Foundation
 
@@ -15,7 +16,6 @@ struct LocationFeatures: Codable {
     let current: Current
     let hourly: [Hourly]
     let daily: [Daily]
-    
     
     struct Current: Codable {
         
@@ -54,6 +54,5 @@ struct LocationFeatures: Codable {
         let end: Int
         let description: String
     }
-    
     
 }

@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 08.01.24.
 //
+//  abstract: Header of the on boarding
 
 import SwiftUI
 

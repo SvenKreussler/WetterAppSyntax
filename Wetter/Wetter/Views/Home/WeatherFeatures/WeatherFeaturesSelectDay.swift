@@ -4,7 +4,7 @@
 //
 //  Created by Sven Kreußler on 23.11.23.
 //
-
+//  abstract: selected weekday binding View
 import SwiftUI
 
 struct WeatherFeaturesSelectDay: View {

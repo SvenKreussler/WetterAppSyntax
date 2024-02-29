@@ -4,11 +4,13 @@
 //
 //  Created by Sven Kreußler on 08.01.24.
 //
+//  abstract: on boarding view
 
 import SwiftUI
 
 struct OnboardingView: View {
     // MARK: - Variables
+    
     @AppStorage("onboarding") private var onboarding = false
     
     var body: some View {

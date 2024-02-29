@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 20.11.23.
 //
+//  abstract: Enum of TabItem
 
 import Foundation
 import SwiftUI

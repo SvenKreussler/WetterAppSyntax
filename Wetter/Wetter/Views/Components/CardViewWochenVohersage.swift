@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 22.11.23.
 //
+//  abstract: styling of weekly preview cardView
 
 import SwiftUI
 
@@ -30,7 +31,7 @@ struct CardViewWochenVohersage: View {
                                 }
                                 .toolbar(.hidden)
                                     .padding()
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                                // .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
                                 .background(.blue)
                                 .foregroundColor(.black)
                             }

@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 05.12.23.
 //
+//  abstract: model for the location request 
 
 import Foundation
 

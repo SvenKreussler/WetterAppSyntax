@@ -4,6 +4,8 @@
 //
 //  Created by Sven Kreußler on 18.12.23.
 //
+// abstract: logic for CoreData
+
 
 import Foundation
 import CoreData

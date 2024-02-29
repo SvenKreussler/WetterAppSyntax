@@ -4,6 +4,8 @@
 //
 //  Created by Sven Kreußler on 27.11.23.
 //
+//  abstract: styling of weatherfeature sheet select
+
 
 import SwiftUI
 
@@ -13,8 +15,8 @@ struct FeaturesSelectButton: View {
         HStack(spacing: 120) {
             // Zusammenfassung des Wochentages als icon und Text
             VStack {
-                Text(LocationItemEnum.berlin.title)
-                    .font(.largeTitle)
+//                Text(LocationItemEnum.berlin.title)
+//                    .font(.largeTitle)
                 Image(systemName: WochenvohersageItem.heute.icon)
                     .font(.largeTitle)
             }

@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 18.12.23.
 //
+//  abstract: viewmodel CoreData
 
 import SwiftUI
 

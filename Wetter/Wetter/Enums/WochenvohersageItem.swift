@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 22.11.23.
 //
+//  abstract: enum of Wochenvohersage
 
 
 

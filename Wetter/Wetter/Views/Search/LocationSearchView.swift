@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 20.12.23.
 //
+//  abstract: view of user provided item
 
 import SwiftUI
 

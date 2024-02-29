@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 20.11.23.
 //
+//  abstract: entry point of app
 
 import SwiftUI
 import CoreLocation

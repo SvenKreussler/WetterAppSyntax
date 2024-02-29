@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 14.12.23.
 //
+//  abstract: styling of unix time into common time format
 
 import Foundation
 

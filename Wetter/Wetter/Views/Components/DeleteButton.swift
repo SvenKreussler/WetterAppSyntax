@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 20.12.23.
 //
+//  abstract: styling of delete button item
 
 import SwiftUI
 

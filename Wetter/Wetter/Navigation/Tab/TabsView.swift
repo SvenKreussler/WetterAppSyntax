@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 20.11.23.
 //
+//  abstract: navigation of tabs
 
 import SwiftUI
 
@@ -11,6 +12,8 @@ struct TabsView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
+            
+            
             HomeView()
                 .environmentObject(locationSearchListViewModel)
                 .environmentObject(locationCurrent)
@@ -18,15 +21,14 @@ struct TabsView: View {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
                 .tag(TabItem.home)
-            
-
-            
-            
+            	
             .onAppear {
                 Task {
-                    await locationCurrent.fetchLocations()
+                    locationCurrent.fetchLocations()
                     await locationCurrent.fetchWeatherData()
+                    
                 }
+                
             }
             
             MapView()

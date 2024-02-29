@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 09.01.24.
 //
+//  abstract: styling of dismiss button on boarding
 
 import SwiftUI
 

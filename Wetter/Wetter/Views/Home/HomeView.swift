@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 21.11.23.
 //
+//  abstract: homeview for location view
 
 import SwiftUI
 
@@ -12,18 +13,16 @@ struct HomeView: View {
     
     var body: some View {
         TabView {
-            
-                            
-            ForEach(locationCurrent.weatherfeatures, id: \.lat ) { item in
+            ForEach(locationCurrent.mergedData, id: \.city) { mergedData in
                 
-                VStack(spacing: 48) {
+                VStack(spacing: 24) {
                     HStack {
-                        
-                        Text("Temperature: \(Int(round(item.current.temp))) °C")
-                        Text("Feels Like: \(Int(round(item.current.feels_like))) °C")
-                        
+                        Text("City: \(mergedData.city)")
+                            .font(.largeTitle)
                     }
                     
+                    Text("Temperature: \(Int(round(mergedData.weatherFeature.current.temp))) °C")
+                    Text("Feels Like: \(Int(round(mergedData.weatherFeature.current.feels_like))) °C")
                     CardViewVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
@@ -34,8 +33,6 @@ struct HomeView: View {
                         .cardViewStyling()
                         .frame(width: 350, height: 300)
                         .environmentObject(locationCurrent)
-                    
-                    
                 }
             }
             
@@ -47,21 +44,20 @@ struct HomeView: View {
         
     }
     
-    
-    
     // MARK: - Variables
     
     @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
     
     @Environment(\.managedObjectContext) private var viewContext
     
-    // @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
+    @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
     
 }
 
 #Preview {
     HomeView()
         .environmentObject(LocationFeaturesViewModel())
-    // .environment(viewContext)
+    
+    //.environmentObject(LocationSearchListViewModel())
     
 }

@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 24.11.23.
 //
+//  abstract: graph for selected whether feature
 
 import SwiftUI
 import Charts

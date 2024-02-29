@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 21.11.23.
 //
+//  abstract: styling of weekly preview cardView
 
 import SwiftUI
 

@@ -4,6 +4,7 @@
 //
 //  Created by Sven Kreußler on 27.11.23.
 //
+//  abstract: Enum for selecting WeatherFeature in weather sheet
 
 import Foundation
 
