@@ -19,10 +19,23 @@ struct HomeView: View {
                     HStack {
                         Text("City: \(mergedData.city)")
                             .font(.largeTitle)
+                        Button(action: {
+                            currentDate = formattedCurrentDate()
+                        }) {
+                            Image(systemName: "arrow.circlepath")
+                        }
+                        
+                    }
+                    Text("Letzte Aktualisierung: \(currentDate)")
+                        .fontWeight(.ultraLight)
+                        
+                    
+                    
+                    HStack {
+                        Text("Temperature: \(Int(round(mergedData.weatherFeature.current.temp))) °C")
+                        Text("Feels Like: \(Int(round(mergedData.weatherFeature.current.feels_like))) °C")
                     }
                     
-                    Text("Temperature: \(Int(round(mergedData.weatherFeature.current.temp))) °C")
-                    Text("Feels Like: \(Int(round(mergedData.weatherFeature.current.feels_like))) °C")
                     CardViewVohersage()
                         .cardViewStyling()
                         .frame(width: 350, height: 100)
@@ -42,7 +55,11 @@ struct HomeView: View {
         .indexViewStyle(.page(backgroundDisplayMode: .always))
         
         
+        
+        
     }
+    
+    
     
     // MARK: - Variables
     
@@ -52,12 +69,22 @@ struct HomeView: View {
     
     @EnvironmentObject var locationSearchListViewModel: LocationSearchListViewModel
     
+    @State private var currentDate: String = ""
+    
+    // MARK: - Functions
+    
+    private func formattedCurrentDate() -> String {
+           let formatter = DateFormatter()
+           formatter.dateFormat = "hh:mm"
+           return formatter.string(from: Date())
+    }
+    
 }
 
 #Preview {
     HomeView()
         .environmentObject(LocationFeaturesViewModel())
     
-    //.environmentObject(LocationSearchListViewModel())
+    // .environmentObject(LocationSearchListViewModel())
     
 }

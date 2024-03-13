@@ -57,44 +57,12 @@ struct LocationEditView: View {
     private func save() {
         locationDetailViewModel.coordinates(for: locationDetailViewModel.city) { coordinates, error in
             if let coordinates = coordinates {
-                                
+                
                 LocationSearchDetailViewModel.shared.save(cityName: locationDetailViewModel.city, coordinates: coordinates)
                 dismissView()
                 
             } else {
                 errorMessage = "Failed to obtain coordinates: \(error?.localizedDescription ?? "Unknown error")"
-            }
-        }
-    }
-    
-    
-    private func requestLocationAuthorization() {
-        // Request "When In Use" authorization for location services
-        clLocationManager.requestWhenInUseAuthorization()
-        
-        // Check the current authorization status
-        let status = CLLocationManager.authorizationStatus()
-        switch status {
-        case .authorizedWhenInUse, .authorizedAlways:
-            // Authorization granted, proceed with location retrieval
-            fetchCoordinates()
-        case .denied, .restricted:
-            errorMessage = "Location access is denied. Please enable it in Settings."
-        case .notDetermined:
-            // Authorization not determined yet, handle this case if needed
-            errorMessage = "Location authorization is not determined."
-        @unknown default:
-            errorMessage = "An unknown error occurred."
-        }
-    }
-    
-    private func fetchCoordinates() {
-        locationManager.coordinates(for: locationDetailViewModel.city) { result, error in
-            if let result = result {
-                coordinates = result
-                errorMessage = nil
-            } else if let error = error {
-                errorMessage = "Error: \(error.localizedDescription)"
             }
         }
     }

@@ -11,7 +11,7 @@ import CoreLocation
 func geocodeAddress(_ address: String, completion: @escaping (CLLocationCoordinate2D?, Error?) -> Void) {
     let geocoder = CLGeocoder()
     
-    geocoder.geocodeAddressString(address) { (placemarks, error) in
+    geocoder.geocodeAddressString(address) { placemarks, error in
         if let error = error {
             completion(nil, error)
             return

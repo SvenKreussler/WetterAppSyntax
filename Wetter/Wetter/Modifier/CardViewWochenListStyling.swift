@@ -18,4 +18,3 @@ struct CardViewWochenListStyling: ViewModifier {
             .foregroundColor(.black)
     }
 }
-

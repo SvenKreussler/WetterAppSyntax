@@ -16,17 +16,12 @@ import Combine
 class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     init() {
-        fetchLocations()
-        Task {
-            scheduleWeatherFetchTimer()
+            scheduleLocationFetchTimer()
+            
+            Publishers.Zip($locationList, $weatherfeatures)
+                        .map(mergeData)
+                        .assign(to: &$mergedData)
         }
-        Publishers.Zip($locationList, $weatherfeatures)
-                    .map(mergeData)
-                    .assign(to: &$mergedData)
-        
-        //The ampersand (&) in .assign(to: &$mergedData) is used to pass the reference of the mergedData property to the assign method.
-        //So, in summary, the ampersand (&) allows assign to modify the mergedData property directly.
-    }
     
     // MARK: - Variables
     
@@ -42,8 +37,8 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     
     @Published var mergedData: [MergedLocationData] = []
     
-    private var weatherFetchTimer: Timer?
-    private let fetchInterval: TimeInterval = 3600
+    private var locationFetchTimer: Timer?
+    private let locationFetchInterval: TimeInterval = 14400 // 4 hours in seconds
     
     // MARK: - Functions
     
@@ -74,20 +69,16 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
         }
     }
     
-    func scheduleWeatherFetchTimer() -> Date? {
-        // Invalidate any existing timer before creating a new one
-        weatherFetchTimer?.invalidate()
-        
-        // Create a weak reference to self to avoid strong reference cycle
-        weatherFetchTimer = Timer.scheduledTimer(withTimeInterval: fetchInterval, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            Task {
-                await self.fetchWeatherData()
+    
+    func scheduleLocationFetchTimer() {
+            // Invalidate any existing timer before creating a new one
+            locationFetchTimer?.invalidate()
+            
+            // Create a new timer to fetch locations
+            locationFetchTimer = Timer.scheduledTimer(withTimeInterval: locationFetchInterval, repeats: true) { [weak self] _ in
+                guard let self = self else { return }
+                self.fetchLocations()
             }
         }
-        
-        // Return the last scheduled time if the timer was set
-        return weatherFetchTimer?.fireDate
-    }
     
 }

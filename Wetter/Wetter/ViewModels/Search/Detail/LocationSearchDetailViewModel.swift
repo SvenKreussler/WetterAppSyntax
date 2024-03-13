@@ -46,10 +46,14 @@ class LocationSearchDetailViewModel: ObservableObject {
     func coordinates(for city: String, completion: @escaping (CLLocationCoordinate2D?, Error?) -> Void) {
         geocoder.geocodeAddressString(city) { placemarks, error in
             if let error = error {
+                print("Geocoding error:", error)
                 completion(nil, error)
             } else if let placemark = placemarks?.first {
-                completion(placemark.location?.coordinate, nil)
+                let coordinates = placemark.location?.coordinate
+                print("Coordinates for \(city): \(coordinates)")
+                completion(coordinates, nil)
             } else {
+                print("No placemarks found for \(city)")
                 completion(nil, NSError(domain: "YourApp", code: 0, userInfo: [NSLocalizedDescriptionKey: "No coordinates found for the provided city name."]))
             }
         }

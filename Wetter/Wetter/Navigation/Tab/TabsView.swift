@@ -21,15 +21,16 @@ struct TabsView: View {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
                 }
                 .tag(TabItem.home)
-            	
-            .onAppear {
-                Task {
-                    locationCurrent.fetchLocations()
-                    await locationCurrent.fetchWeatherData()
+
+                .onAppear {
+                    Task {
+                        locationCurrent.fetchLocations()
+                        await locationCurrent.fetchWeatherData()
+                    }
                     
                 }
-                
-            }
+            
+            
             
             MapView()
                 .tabItem {
@@ -50,6 +51,8 @@ struct TabsView: View {
     // MARK: - Variables
     
     @State private var selectedTab: TabItem = .home
+    
+    
     @StateObject private var locationCurrent = LocationFeaturesViewModel()
     
     @StateObject var locationSearchListViewModel = LocationSearchListViewModel()

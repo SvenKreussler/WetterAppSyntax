@@ -18,7 +18,7 @@
 		0E252A212B4D4C1900E0B27D /* OnBoardingDissmiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A202B4D4C1900E0B27D /* OnBoardingDissmiss.swift */; };
 		0E252A232B4D5A3C00E0B27D /* CardViewWochenListStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E252A222B4D5A3C00E0B27D /* CardViewWochenListStyling.swift */; };
 		0E351E8D2B303BC200B25629 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E8C2B303BC200B25629 /* PersistentStore.swift */; };
-		0E351E912B30706A00B25629 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E902B30706A00B25629 /* LocationViewModel.swift */; };
+		0E351E912B30706A00B25629 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E902B30706A00B25629 /* LocationModel.swift */; };
 		0E351E9A2B319A1F00B25629 /* LocationSearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E992B319A1F00B25629 /* LocationSearchListViewModel.swift */; };
 		0E351E9F2B32F44500B25629 /* LocationEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351E9E2B32F44500B25629 /* LocationEditView.swift */; };
 		0E351EA62B32FD0B00B25629 /* LocationSearchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E351EA52B32FD0B00B25629 /* LocationSearchDetailViewModel.swift */; };
@@ -68,7 +68,7 @@
 		0E252A202B4D4C1900E0B27D /* OnBoardingDissmiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingDissmiss.swift; sourceTree = "<group>"; };
 		0E252A222B4D5A3C00E0B27D /* CardViewWochenListStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewWochenListStyling.swift; sourceTree = "<group>"; };
 		0E351E8C2B303BC200B25629 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
-		0E351E902B30706A00B25629 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		0E351E902B30706A00B25629 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		0E351E992B319A1F00B25629 /* LocationSearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchListViewModel.swift; sourceTree = "<group>"; };
 		0E351E9E2B32F44500B25629 /* LocationEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditView.swift; sourceTree = "<group>"; };
 		0E351EA52B32FD0B00B25629 /* LocationSearchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchDetailViewModel.swift; sourceTree = "<group>"; };
@@ -299,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				0EBB08492B1DD01B00DB2D83 /* LocationFeaturesViewModel.swift */,
-				0E351E902B30706A00B25629 /* LocationViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -315,6 +314,7 @@
 		0EBA63392B1621090001F895 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				0E351E902B30706A00B25629 /* LocationModel.swift */,
 				0EBB08472B19E0D300DB2D83 /* api.JSON */,
 				0EBB08432B19DCFF00DB2D83 /* LocationFeatures.swift */,
 				0EE280D72B1F2DEA0093C6D9 /* LocationList.swift */,
@@ -524,7 +524,7 @@
 				0E6967C02B10E4A000FA1943 /* WeatherFeaturesChart.swift in Sources */,
 				0EBA63442B17713D0001F895 /* LocationSearchViewModel.swift in Sources */,
 				0E7759042B0CD68A0069AF61 /* CardViewVohersage.swift in Sources */,
-				0E351E912B30706A00B25629 /* LocationViewModel.swift in Sources */,
+				0E351E912B30706A00B25629 /* LocationModel.swift in Sources */,
 				0E904CFF2B443F24002848A3 /* Wetter.xcdatamodeld in Sources */,
 				0E7758E42B0B92110069AF61 /* TabsView.swift in Sources */,
 				0E0B2BAB2B14D04700DDB408 /* WeatherFeatureItem.swift in Sources */,
@@ -701,7 +701,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -741,7 +741,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

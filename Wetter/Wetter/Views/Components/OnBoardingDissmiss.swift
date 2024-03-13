@@ -32,6 +32,6 @@ struct OnBoardingDissmiss: View {
 }
 
 #Preview {
-    OnBoardingDissmiss(title: "Start")
-    {}
+    OnBoardingDissmiss(title: "Start") { }
+    
 }

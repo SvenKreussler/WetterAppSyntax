@@ -8,6 +8,7 @@
 
 import Foundation
 struct MergedLocationData {
+    // let lastChecked: String
     let city: String
     let lat: Float
     let lon: Float

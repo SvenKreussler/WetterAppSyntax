@@ -30,7 +30,7 @@ struct WeatherFeaturesViewSheet: View {
                     .tint(Color.gray)
                     .buttonStyle(.borderedProminent)
                     .clipShape(Circle())
-            }
+        }
         Divider()
 
          FeaturesSelectButton()
@@ -44,7 +44,7 @@ struct WeatherFeaturesViewSheet: View {
         
     }
     
-    //MARK: - Varibles
+    // MARK: - Varibles
     
     @EnvironmentObject var locationCurrent: LocationFeaturesViewModel
 }

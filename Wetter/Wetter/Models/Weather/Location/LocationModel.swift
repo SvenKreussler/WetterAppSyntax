@@ -1,5 +1,5 @@
 //
-//  LocationViewModel.swift
+//  LocationModel.swift
 //  Wetter
 //
 //  Created by Sven Kreußler on 18.12.23.

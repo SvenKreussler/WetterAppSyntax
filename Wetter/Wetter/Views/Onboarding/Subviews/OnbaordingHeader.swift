@@ -10,10 +10,9 @@ import SwiftUI
 
 struct OnbaordingHeader: View {
     var body: some View {
-        HStack{
+        HStack {
             Text("Wetter-APP")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/
-                       ,alignment: .leading)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             Text("🌞")
         }.font(.largeTitle)
          .fontWeight(.heavy)
