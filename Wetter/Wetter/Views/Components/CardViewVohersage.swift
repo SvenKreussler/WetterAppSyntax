@@ -24,7 +24,6 @@ struct CardViewVohersage: View {
                     .overlay(.black)
                 HStack(spacing: 24) {
                     ForEach(locationCurrent.weatherfeatures, id: \.lat) { item in
-                        
                         ForEach(item.hourly, id: \.dt) { hourly in
                             VStack {
                                 Text("\(formattedTime(for: hourly.dt))")
@@ -34,6 +33,11 @@ struct CardViewVohersage: View {
                             
                         }
    
+                    }
+                }
+                HStack(spacing: 24) {
+                    ForEach(locationCurrent.mergedData, id: \.city) { item in
+                        
                     }
                 }
             }

@@ -31,5 +31,5 @@ struct LocationSearchView: View {
 }
 
 #Preview {
-    LocationSearchView(locationViewModel: .init(location: .init(context: PersistentStore.shared.context)), city: "test")
+    LocationSearchView(locationViewModel: .init(location: .init(context: PersistentStore.shared.context)), city: "Test")
 }

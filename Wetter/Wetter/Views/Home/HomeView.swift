@@ -28,8 +28,6 @@ struct HomeView: View {
                     }
                     Text("Letzte Aktualisierung: \(currentDate)")
                         .fontWeight(.ultraLight)
-                        
-                    
                     
                     HStack {
                         Text("Temperature: \(Int(round(mergedData.weatherFeature.current.temp))) °C")
@@ -54,12 +52,7 @@ struct HomeView: View {
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
         
-        
-        
-        
     }
-    
-    
     
     // MARK: - Variables
     
