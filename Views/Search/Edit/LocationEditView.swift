@@ -4,7 +4,7 @@
 //
 //  Created by Sven Kreußler on 20.12.23.
 //
-//  abstract: sheet for user providing location
+//  abstract: sheet for user providing location String
 
 import SwiftUI
 import CoreLocation
@@ -38,9 +38,9 @@ struct LocationEditView: View {
     
     // MARK: - Variables
     
-    @State private var cityName = ""
-    @State private var errorMessage: String?
-    @State private var coordinates: CLLocationCoordinate2D?
+    
+    @State var errorMessage: String?
+    @State var coordinates: CLLocationCoordinate2D?
     
     private let locationManager = LocationSearchDetailViewModel()
     private let clLocationManager = CLLocationManager()
@@ -48,7 +48,7 @@ struct LocationEditView: View {
     @Binding var isPresented: Bool
     
     // change of var from "locationDetailViewModel" to "persistentLocation "
-    @StateObject private var locationDetailViewModel = LocationSearchDetailViewModel()
+    @StateObject var locationDetailViewModel = LocationSearchDetailViewModel()
     
     // MARK: - Functions
     

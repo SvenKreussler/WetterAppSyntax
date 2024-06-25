@@ -28,6 +28,7 @@ class LocationFeaturesViewModel: ObservableObject, Identifiable {
     @Published var weatherfeatures: [LocationFeatures] = [LocationFeatures(lat: 0.0, lon: 0.0, current: LocationFeatures.Current(dt: 0, temp: 0.0, feels_like: 0.0), hourly: [LocationFeatures.Hourly(dt: 0, temp: 0.0)], daily: [LocationFeatures.Daily(dt: 0, temp: LocationFeatures.Temp(day: 0.00, min: 0.00, max: 0.00), uvi: 0.00)])]
     
     @Published var locationList = [LocationList()]
+    
 
     @Published var locations: [String] = []
     

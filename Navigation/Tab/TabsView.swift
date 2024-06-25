@@ -16,6 +16,7 @@ struct TabsView: View {
             
             HomeView()
                 .environmentObject(locationSearchListViewModel)
+                // ^ unnötig
                 .environmentObject(locationCurrent)
                 .tabItem {
                     Label(TabItem.home.title, systemImage: TabItem.home.icon)
@@ -51,6 +52,7 @@ struct TabsView: View {
     @StateObject private var locationCurrent = LocationFeaturesViewModel()
     
     @StateObject var locationSearchListViewModel = LocationSearchListViewModel()
+    // ^ unnötig
     
     @Environment(\.managedObjectContext) private var viewContext
 }

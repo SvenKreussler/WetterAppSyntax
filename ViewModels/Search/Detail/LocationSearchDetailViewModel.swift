@@ -1,5 +1,5 @@
 //
-//  LocationDetailViewModel.swift
+//  LocationSearchDetailViewModel.swift
 //  Wetter
 //
 //  Created by Sven Kreußler on 20.12.23.
@@ -20,9 +20,11 @@ class LocationSearchDetailViewModel: ObservableObject {
     
     
     static let shared = LocationSearchDetailViewModel()
+    // ??? Global constants and variables are always computed lazily, in a similar manner to Lazy Stored Properties
     
     
     @Published var city = ""
+    // User Provided String in Sheet in the Search View
     
     // MARK: - Computed Properties
     
@@ -36,6 +38,7 @@ class LocationSearchDetailViewModel: ObservableObject {
         let location = Location(context: container.context)
         location.id = UUID()
         location.city = cityName
+        // User Provided name now is "cityName" not "city"
         location.lat = Float(coordinates.latitude)
         location.lon = Float(coordinates.longitude)
         
